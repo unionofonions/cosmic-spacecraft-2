@@ -361,3 +361,15 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vsconfig
+/cosmic-spacecraft-2.sln
+/Library
+/Parlor.Core.csproj
+/Parlor.Editor.csproj
+/Parlor.Game.csproj
+/Parlor.Game.Editor.csproj
+/Parlor.Game.Test.csproj
+/ProjectSettings
+/UserSettings
+/Assets/Plugin/TextMesh Pro
+/Assets/Source/Test

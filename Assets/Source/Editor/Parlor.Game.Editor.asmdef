@@ -1,0 +1,20 @@
+{
+    "name": "Parlor.Game.Editor",
+    "rootNamespace": "Parlor.Game.Editor",
+    "references": [
+        "GUID:b599d74954ffb184d86ef434592a40b3",
+        "GUID:51c988af7389dba40847b57da3b3c9a7",
+        "GUID:2bdf672b40e883e49a14632adb4ff304"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
