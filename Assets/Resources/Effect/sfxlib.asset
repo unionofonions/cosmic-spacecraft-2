@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d18ca50787f39847a69a7c6dbc46c56, type: 3}
+  m_Name: sfxlib
+  m_EditorClassIdentifier: 
+  m_Default:
+    m_Name: __null
+    m_Id: 0
+    m_Valid: 0
+    m_Bank:
+      m_Collection: []
+      m_Mode: 0
+      m_Threshold: 0
+      m_TotalWeight: 0
+    m_VolumeScale: 0
+  m_Heap:
+  - m_Name: fire/player
+    m_Id: 1
+    m_Valid: 1
+    m_Bank:
+      m_Collection:
+      - m_Value: {fileID: 8300000, guid: 5d708693396e02644af920f2cd6a9207, type: 3}
+        m_Weight: 0
+        m_Weighted: 0
+        m_Chance: 0
+      m_Mode: 0
+      m_Threshold: 0
+      m_TotalWeight: 0
+    m_VolumeScale: 0.7
+  m_NextId: 1
