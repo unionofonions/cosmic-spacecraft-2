@@ -93,12 +93,10 @@ namespace Parlor
 			private T m_Value;
 			[SerializeField, Unsigned]
 			private float m_Weight;
-#if UNITY_EDITOR
 			[SerializeField, HideInInspector]
 			private bool m_Weighted;
 			[SerializeField, ReadOnly, Limited(0f, 100f)]
 			private float m_Chance;
-#endif
 #nullable enable
 			#endregion // Internal
 		}

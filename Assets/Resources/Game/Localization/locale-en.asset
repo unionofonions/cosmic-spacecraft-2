@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: locale-en
   m_EditorClassIdentifier: 
   m_KeywordTextPairs:
-  - Keyword: boss_kill
-    Text: BOSS '{0}' KILLED!
+  - Keyword: game_started
+    Text: GET READY!
+  - Keyword: level_started
+    Text: NOW ENTERING

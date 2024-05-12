@@ -6,7 +6,7 @@ namespace Parlor.Game
 
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-	public class Bullet : MonoBehaviour
+	public class Bullet : MonoBehaviour, IBoundaryItem
 	{
 		private Actor m_Source;
 		private bool m_Active;
@@ -25,7 +25,7 @@ namespace Parlor.Game
 		{
 			if (collision.TryGetComponent<Actor>(out var target) && target.IsHostileAgainst(m_Source))
 			{
-				target.TakeDamage(m_Source, hitPosition: transform.position);
+				target.TakeDamage(instigator: m_Source, hitPosition: transform.position);
 				gameObject.SetActive(false);
 			}
 		}

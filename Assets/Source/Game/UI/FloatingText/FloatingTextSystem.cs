@@ -22,6 +22,7 @@ namespace Parlor.Game.UI
 			m_RandomHelper = new(m_RandomPositionRadius);
 			Actor.OnReaction += OnReaction;
 			Actor.OnAction += OnAction;
+			Domain.GetSpawnSystem().OnBeginSpawn += ReturnAll;
 		}
 		public void ReturnAll()
 		{

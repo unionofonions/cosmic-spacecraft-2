@@ -40,7 +40,6 @@ namespace Parlor.Game
 		private Sprite[] m_BodyVisuals;
 		private bool m_Active;
 		private SpriteRenderer m_Renderer;
-		private Rigidbody2D m_Rigidbody;
 
 		public float Damage
 		{
@@ -84,15 +83,10 @@ namespace Parlor.Game
 		{
 			get => m_Renderer;
 		}
-		protected Rigidbody2D Rigidbody
-		{
-			get => m_Rigidbody;
-		}
 
 		protected void Awake()
 		{
 			m_Renderer = GetComponent<SpriteRenderer>();
-			m_Rigidbody = GetComponent<Rigidbody2D>();
 		}
 		protected void OnEnable()
 		{
@@ -109,15 +103,18 @@ namespace Parlor.Game
 		public bool IsHostileAgainst(Actor other)
 		{
 			if (other == null) return false;
+			if ((m_Faction | other.m_Faction) is ActorFaction.FullyChaotic) return true;
+			if ((m_Faction & other.m_Faction) is ActorFaction.SemiChaotic) return false;
 			return m_Faction != other.m_Faction;
 		}
-		public virtual void ResetProperties()
+		public virtual void Respawn()
 		{
 			Health = Quantity.Full(m_Health.Max);
+			gameObject.SetActive(true);
 		}
 		public void TakeDamage(Actor instigator, Vector3 hitPosition)
 		{
-			if (instigator == null) return;
+			if (instigator == null || IsDead()) return;
 			var rawDamage = instigator.Damage;
 			var takenDamage = Mathf.Max(rawDamage - m_Shield.Current, 0f);
 			var absorbedDamage = rawDamage - takenDamage;
@@ -184,7 +181,9 @@ namespace Parlor.Game
 	public enum ActorFaction
 	{
 		Enemy,
-		Player
+		Player,
+		SemiChaotic,
+		FullyChaotic
 	}
 	public readonly ref struct ReactionInfo
 	{

@@ -21,6 +21,7 @@ namespace Parlor.Game
 		private int m_IdleHash;
 		private int m_MoveHash;
 		private bool m_Moving;
+		private Rigidbody2D m_Rigidbody;
 
 		public int GunCount
 		{
@@ -47,6 +48,7 @@ namespace Parlor.Game
 		private new void Awake()
 		{
 			base.Awake();
+			m_Rigidbody = GetComponent<Rigidbody2D>();
 			m_IdleHash = Animator.StringToHash("idle");
 			m_MoveHash = Animator.StringToHash("move");
 		}
@@ -55,17 +57,17 @@ namespace Parlor.Game
 			var input = Domain.GetInputSystem();
 			if (input.Hold("fir")) UpdateGuns();
 			var dir = new Vector2(input.Axis("hor"), input.Axis("ver"));
-			Rigidbody.velocity = dir.normalized * MoveSpeed;
+			m_Rigidbody.velocity = dir.normalized * MoveSpeed;
 			UpdateEngine(moving: dir.x != 0f || dir.y != 0f);
 		}
-		public override void ResetProperties()
+		public override void Respawn()
 		{
-			base.ResetProperties();
+			base.Respawn();
 			if (m_PlayerInfo != null)
 			{
 				Damage = m_PlayerInfo.Damage;
 				Health = Quantity.Full(m_PlayerInfo.Health);
-				Shield = Quantity.Full(m_PlayerInfo.Shield);
+				Shield = m_PlayerInfo.Shield;
 				MoveSpeed = m_PlayerInfo.MoveSpeed;
 				FireInterval = m_PlayerInfo.FireInterval;
 				BulletSpeed = m_PlayerInfo.BulletSpeed;

@@ -25,11 +25,11 @@ namespace Parlor
 				? Int32(-1, 2)
 				: Int32(0, 2) == 0 ? -1 : 1;
 		}
-		static public Vector2 Circle(float outerRadius, float innerRadius = 0f)
+		static public Vector2 Circle(float outerRadius, float innerRadius = 0f, float minAngle = 0f, float maxAngle = 360f)
 		{
-			var angle = Single(0f, MathHelper.Tau);
+			var angleOffset = Single(minAngle, maxAngle);
 			var radius = Single(innerRadius, outerRadius);
-			return new(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius);
+			return MathHelper.Deg2Dir(angleOffset) * radius;
 		}
 		static public T? Element<T>(IEnumerable<T?>? enumerable)
 		{

@@ -10,8 +10,8 @@ namespace Parlor.Game
 		private float m_Damage;
 		[SerializeField, MinEpsilon]
 		private float m_Health;
-		[SerializeField, Unsigned]
-		private float m_Shield;
+		[SerializeField]
+		private Quantity m_Shield;
 		[SerializeField, Unsigned]
 		private float m_MoveSpeed;
 		[SerializeField, Limited(Ship.MinFireInterval)]
@@ -33,7 +33,7 @@ namespace Parlor.Game
 		{
 			get => m_Health;
 		}
-		public float Shield
+		public Quantity Shield
 		{
 			get => m_Shield;
 		}

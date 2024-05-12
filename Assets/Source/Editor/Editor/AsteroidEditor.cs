@@ -11,23 +11,17 @@ namespace Parlor.Game.Editor
 		private SerializedProperty m_AsteroidFlagsProp;
 		private SerializedProperty m_SplitAsteroidProp;
 		private SerializedProperty m_SplitCountProp;
-		private SerializedProperty m_InvisibilityCurveProp;
 
 		protected void OnEnable()
 		{
 			m_AsteroidFlagsProp = serializedObject.PropertyOrThrow("m_AsteroidFlags");
 			m_SplitAsteroidProp = serializedObject.PropertyOrThrow("m_SplitAsteroid");
 			m_SplitCountProp = serializedObject.PropertyOrThrow("m_SplitCount");
-			m_InvisibilityCurveProp = serializedObject.PropertyOrThrow("m_InvisibilityCurve");
 		}
 		public override void OnInspectorGUI()
 		{
 			serializedObject.Update();
 			base.OnInspectorGUI();
-			if (HasFlags(AsteroidFlags.Stealth))
-			{
-				EditorGUILayout.PropertyField(m_InvisibilityCurveProp);
-			}
 			if (HasFlags(AsteroidFlags.Splitting))
 			{
 				EditorGUILayout.PropertyField(m_SplitAsteroidProp);

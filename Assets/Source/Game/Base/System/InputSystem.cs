@@ -2,7 +2,9 @@
 namespace Parlor.Game
 {
 	using UnityEngine;
+	using Parlor.Diagnostics;
 
+	[DisallowMultipleComponent]
 	public sealed class InputSystem : MonoBehaviour
 	{
 		public float Axis(string code)
@@ -18,6 +20,7 @@ namespace Parlor.Game
 					if (Input.GetKey(KeyCode.W)) return +1f;
 					return 0f;
 				default:
+					OnUnknownCode(code);
 					return 0f;
 			}
 		}
@@ -28,8 +31,13 @@ namespace Parlor.Game
 				case "fir":
 					return Input.GetKey(KeyCode.Space);
 				default:
+					OnUnknownCode(code);
 					return false;
 			}
+		}
+		private void OnUnknownCode(string code)
+		{
+			Log.Warning($"Unknown input code: {code}.");
 		}
 	}
 }

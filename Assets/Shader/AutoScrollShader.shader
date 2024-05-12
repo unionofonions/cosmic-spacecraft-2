@@ -9,6 +9,7 @@ Shader "Unlit/AutoScrollShader"
     SubShader
     {
         Tags { "Queue"="Background" }
+        Blend SrcAlpha OneMinusSrcAlpha
         Pass
         {
             CGPROGRAM

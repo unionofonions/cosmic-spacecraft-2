@@ -58,10 +58,8 @@ namespace Parlor
 		private RecordLibrary<T> m_Library;
 		[SerializeField, HideInInspector]
 		private int m_Id;
-#if !UNITY_EDITOR
 		[NonSerialized]
 		private T m_Info;
-#endif
 #nullable enable
 #endregion // Internal
 	}

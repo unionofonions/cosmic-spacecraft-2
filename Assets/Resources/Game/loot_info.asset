@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd376d48e2c47cb4dbd79d9bd9f72add, type: 3}
-  m_Name: locale-tr
+  m_Script: {fileID: 11500000, guid: 6316fbd799101254ea2a9d65b8500367, type: 3}
+  m_Name: loot_info
   m_EditorClassIdentifier: 
-  m_KeywordTextPairs:
-  - Keyword: game_started
-    Text: HAZIRLAN!
-  - Keyword: level_started
-    Text: GIRIS YAPILIYOR
+  m_HealDropChance: 0.04
+  m_ShieldDropChance: 0.06
+  m_HealAmount:
+    Start: 5
+    End: 8
+  m_ShieldAmount:
+    Start: 5
+    End: 8

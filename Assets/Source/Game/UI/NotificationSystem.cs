@@ -51,9 +51,9 @@ namespace Parlor.Game.UI
 					AsyncTime.Scaled(delay));
 			}
 		}
-		public void HideText()
+		public void HideText(int abortDelayed = 1)
 		{
-			m_DelayOp.Abort();
+			if (abortDelayed != 0) m_DelayOp.Abort();
 			if (m_Label != null) m_Label.text = String.Empty;
 			gameObject.SetActive(false);
 		}
