@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: player_info
   m_EditorClassIdentifier: 
   m_Damage: 50
+  m_DamageDeviation: 0.15
   m_Health: 100
   m_Shield:
     m_Current: 0

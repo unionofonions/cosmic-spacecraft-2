@@ -17,3 +17,5 @@ MonoBehaviour:
     Text: HAZIRLAN!
   - Keyword: level_started
     Text: GIRIS YAPILIYOR
+  - Keyword: new_record
+    Text: YENI REKOR!

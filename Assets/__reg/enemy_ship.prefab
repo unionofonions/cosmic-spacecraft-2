@@ -218,7 +218,6 @@ GameObject:
   - component: {fileID: 6094911242149200220}
   - component: {fileID: 992180055119409289}
   - component: {fileID: 2683956262262205850}
-  - component: {fileID: 8137601735298497738}
   m_Layer: 6
   m_Name: enemy_ship
   m_TagString: Untagged
@@ -361,6 +360,7 @@ MonoBehaviour:
     m_Max: 0
   m_MoveSpeed: 4
   m_Faction: 0
+  m_Score: 9
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 0
@@ -387,21 +387,6 @@ MonoBehaviour:
   - {fileID: 2663995482445360779}
   m_RotationSpeed: 100
   m_Range: 4
---- !u!114 &8137601735298497738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7086125505544767701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 939fb221fdd4b81498b0aba563490f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InvisibilityCurve:
-    m_Library: {fileID: 11400000, guid: 0c1953755c19c4a479c04466676af545, type: 2}
-    m_Id: 1
 --- !u!1 &8331602953327080014
 GameObject:
   m_ObjectHideFlags: 0

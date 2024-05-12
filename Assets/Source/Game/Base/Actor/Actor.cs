@@ -1,8 +1,8 @@
+using System.Runtime.CompilerServices;
+using UnityEngine;
 
 namespace Parlor.Game
 {
-	using System.Runtime.CompilerServices;
-	using UnityEngine;
 	using Parlor.Runtime;
 
 	[DisallowMultipleComponent]
@@ -18,6 +18,8 @@ namespace Parlor.Game
 		[Header("Actor")]
 		[SerializeField, Unsigned]
 		private float m_Damage;
+		[SerializeField, Percentage]
+		private float m_DamageDeviation;
 		[SerializeField]
 		private Quantity m_Health;
 		[SerializeField, Unsigned]
@@ -26,6 +28,8 @@ namespace Parlor.Game
 		private float m_MoveSpeed;
 		[SerializeField]
 		private ActorFaction m_Faction;
+		[SerializeField, Unsigned]
+		private int m_Score;
 		[SerializeField]
 		private AfxReference m_HitAfx;
 		[SerializeField]
@@ -47,6 +51,14 @@ namespace Parlor.Game
 			set
 			{
 				SetProperty(ref m_Damage, Mathf.Max(value, 0f));
+			}
+		}
+		public float DamageDeviation
+		{
+			get => m_DamageDeviation;
+			set
+			{
+				SetProperty(ref m_DamageDeviation, Mathf.Clamp(value, 0.0f, 1.0f));
 			}
 		}
 		public Quantity Health
@@ -74,6 +86,14 @@ namespace Parlor.Game
 			{
 				SetProperty(ref m_MoveSpeed, Mathf.Max(value, 0f));
 			}
+		}
+		public ActorFaction Faction
+		{
+			get => m_Faction;
+		}
+		public int Score
+		{
+			get => m_Score;
 		}
 		public bool Active
 		{
@@ -116,6 +136,8 @@ namespace Parlor.Game
 		{
 			if (instigator == null || IsDead()) return;
 			var rawDamage = instigator.Damage;
+			rawDamage *= 1f + Random.Single(-instigator.m_DamageDeviation, instigator.m_DamageDeviation);
+			rawDamage = Mathf.Max(rawDamage, 0f);
 			var takenDamage = Mathf.Max(rawDamage - m_Shield.Current, 0f);
 			var absorbedDamage = rawDamage - takenDamage;
 			Shield = new(m_Shield.Current - absorbedDamage, m_Shield.Max);

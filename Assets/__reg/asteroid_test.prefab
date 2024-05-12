@@ -181,6 +181,7 @@ MonoBehaviour:
     m_Max: 0
   m_MoveSpeed: 4
   m_Faction: 0
+  m_Score: 8
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 0

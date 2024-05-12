@@ -8,6 +8,8 @@ namespace Parlor.Game
 	{
 		[SerializeField, Unsigned]
 		private float m_Damage;
+		[SerializeField, Percentage]
+		private float m_DamageDeviation;
 		[SerializeField, MinEpsilon]
 		private float m_Health;
 		[SerializeField]
@@ -28,6 +30,10 @@ namespace Parlor.Game
 		public float Damage
 		{
 			get => m_Damage;
+		}
+		public float DamageDeviation
+		{
+			get => m_DamageDeviation;
 		}
 		public float Health
 		{

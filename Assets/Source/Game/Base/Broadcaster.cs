@@ -27,6 +27,10 @@ namespace Parlor.Game
 						delay: 0f);
 				}
 			};
+			ScoreSystem.OnHighestScoreChanged += score =>
+			{
+				BroadcastKeyword("new_record", delay: 0f);
+			};
 		}
 		static private void BroadcastText(string text, float delay)
 		{

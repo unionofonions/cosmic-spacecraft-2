@@ -41,7 +41,7 @@ namespace Parlor.Game.UI
 		private void OnAction(Actor subject, string actionName, object args)
 		{
 			var comp = m_Pool.Provide();
-			var pos = subject.transform.position + m_RandomHelper.Position();
+			var pos = subject.transform.position;
 			comp.PlayActionAnimation(pos, actionName, args);
 		}
 
