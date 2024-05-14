@@ -6,7 +6,7 @@ namespace Parlor.Game
 
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-	public class Bullet : MonoBehaviour, IBoundaryItem
+	public class Bullet : MonoBehaviour, IDestroyOnExitBoundary
 	{
 		private Actor m_Source;
 		private bool m_Active;

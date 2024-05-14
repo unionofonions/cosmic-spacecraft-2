@@ -11,7 +11,7 @@ namespace Parlor.Runtime
 		public void Play(TfxReference? reference, float amplitude)
 		{
 			Contract.Assume(Application.isPlaying);
-			if (reference == null) return;
+			if (!m_Valid || reference == null) return;
 			var info = reference.Info;
 			if (info == null || !info.Valid || reference.Duration <= 0f) return;
 			amplitude *= reference.Amplitude;
@@ -26,10 +26,11 @@ namespace Parlor.Runtime
 		}
 		public bool Active()
 		{
-			return m_Pool.ActiveCount > 0;
+			return m_Valid && m_Pool.ActiveCount > 0;
 		}
 		public void StopAll()
 		{
+			if (!m_Valid) return;
 			foreach (var elem in m_Pool) elem.Active = false;
 			m_Pool.ActiveCount = 0;
 			enabled = false;
@@ -39,11 +40,13 @@ namespace Parlor.Runtime
 		#region Internal
 #nullable disable
 		private Pool m_Pool;
+		private bool m_Valid;
 
 		private void Awake()
 		{
 			m_Pool = new(transform);
 			enabled = false;
+			m_Valid = true;
 		}
 		private void Update()
 		{

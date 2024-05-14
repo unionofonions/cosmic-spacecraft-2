@@ -1,11 +1,12 @@
 #nullable enable
 
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
+
 namespace Parlor.Game
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Diagnostics.CodeAnalysis;
-	using UnityEngine;
 	using Parlor.Diagnostics;
 
 	public readonly struct AsyncOperation
@@ -21,7 +22,15 @@ namespace Parlor.Game
 
 		static public AsyncOperation InvokeDelayed(Action? action, AsyncTime delay)
 		{
-			if (action == null || delay.Seconds <= 0f) return default;
+			if (action == null)
+			{
+				return default;
+			}
+			if (delay.Seconds <= 0f)
+			{
+				action.Invoke();
+				return default;
+			}
 			var processor = Pool.Provide();
 			processor.Restart(OpCode.Delayed);
 			processor.Action = action;
@@ -40,20 +49,28 @@ namespace Parlor.Game
 			Messenger.Instance.UpdateStatus();
 			return new(reference: processor);
 		}
+		static public AsyncOperation ReadFunction(Action<float>? actionf, IFunction? function, AsyncTime time)
+		{
+			if (actionf == null || function == null)
+			{
+				return default;
+			}
+			var processor = Pool.Provide();
+			processor.Restart(OpCode.ReadFunction);
+			processor.Actionf = actionf;
+			processor.Function = function;
+			processor.Timer = 0f;
+			processor.Scaled = time.IsScaled;
+			processor.TMul = 1f / time.Seconds;
+			Messenger.Instance.UpdateStatus();
+			return new(reference: processor);
+		}
 
-		public AsyncOperation OnEnd(Action? action)
+		public AsyncOperation OnEnd(Action<AsyncOperationEndType>? action)
 		{
 			if (TryGetReference(out var reference))
 			{
 				reference.OnEnd = action;
-			}
-			return this;
-		}
-		public AsyncOperation OnAbort(Action? action)
-		{
-			if (TryGetReference(out var reference))
-			{
-				reference.OnAbort = action;
 			}
 			return this;
 		}
@@ -67,7 +84,7 @@ namespace Parlor.Game
 			{
 				Pool.SustendAt(reference.Offset);
 				Messenger.Instance.UpdateStatus();
-				reference.OnAbort?.Invoke();
+				reference.OnEnd?.Invoke(AsyncOperationEndType.Abort);
 				return true;
 			}
 			return false;
@@ -112,7 +129,8 @@ namespace Parlor.Game
 					{
 						Pool.SustendAt(i);
 						UpdateStatus();
-						Pool.Collection[i].OnEnd?.Invoke();
+						var elem = Pool.Collection[i];
+						elem.OnEnd?.Invoke(AsyncOperationEndType.Complete);
 					}
 				}
 			}
@@ -135,18 +153,24 @@ namespace Parlor.Game
 			public int Version;
 			public Func<bool> Update;
 			public Action Action;
+			public Action<float> Actionf;
+			public IFunction Function;
 			public IEnumerator<AsyncTime> Coroutine;
 			public float Timer;
+			public float TMul;
 			public bool Scaled;
-			public Action? OnEnd;
-			public Action? OnAbort;
+			public Action<AsyncOperationEndType>? OnEnd;
+			private readonly Empty m_Empty;
 
 			public Processor()
 			{
 				Version = 1;
-				Update = EmptyUpdate;
-				Action = EmptyAction;
-				Coroutine = EmptyCoroutine();
+				m_Empty = new();
+				Update = m_Empty.Update;
+				Action = m_Empty.Action;
+				Actionf = m_Empty.Actionf;
+				Function = m_Empty;
+				Coroutine = m_Empty.Coroutine();
 			}
 
 			public bool Active
@@ -163,10 +187,10 @@ namespace Parlor.Game
 				{
 					OpCode.Delayed => UpdateDelayed,
 					OpCode.Coroutine => UpdateCoroutine,
-					_ => EmptyUpdate
+					OpCode.ReadFunction => UpdateReadFunction,
+					_ => m_Empty.Update
 				};
 				OnEnd = null;
-				OnAbort = null;
 				++Version;
 			}
 			private bool UpdateDelayed()
@@ -193,29 +217,59 @@ namespace Parlor.Game
 				}
 				return true;
 			}
+			private bool UpdateReadFunction()
+			{
+				Timer += GetDeltaTime() * TMul;
+				float y;
+				if (Timer >= 1f)
+				{
+					y = Function.Evaluate(1f);
+					Actionf?.Invoke(y);
+					return false;
+				}
+				y = Function.Evaluate(Timer);
+				Actionf?.Invoke(y);
+				return true;
+			}
 			private float GetDeltaTime()
 			{
 				return Scaled ? Time.deltaTime : Time.unscaledDeltaTime;
 			}
-			private bool EmptyUpdate()
+
+#pragma warning disable IDE0060
+			private sealed class Empty : IFunction
 			{
-				Log.Error("AsyncOperation.Processor.EmptyUpdate should not be called.");
-				return false;
+				public bool Update()
+				{
+					Log.Error("AsyncOperation.Processor.Empty.Update should not be called.");
+					return false;
+				}
+				public void Action()
+				{
+					Log.Error("AsyncOperation.Processor.Empty.Action should not be called.");
+				}
+				public void Actionf(float y)
+				{
+					Log.Error("AsyncOperation.Processor.Empty.Actionf should not be called.");
+				}
+				public IEnumerator<AsyncTime> Coroutine()
+				{
+					Log.Error("AsyncOperation.Processor.Empty.Coroutine should not be called.");
+					yield break;
+				}
+				float IFunction.Evaluate(float x)
+				{
+					Log.Error("AsyncOperation.Processor.Empty.Evaluate should not be called.");
+					return 0f;
+				}
 			}
-			private void EmptyAction()
-			{
-				Log.Error("AsyncOperation.Processor.EmptyAction should not be called.");
-			}
-			private IEnumerator<AsyncTime> EmptyCoroutine()
-			{
-				Log.Error("AsyncOperation.Processor.EmptyIterator should not be called.");
-				yield break;
-			}
+#pragma warning restore IDE0060
 		}
 		private enum OpCode
 		{
 			Delayed,
-			Coroutine
+			Coroutine,
+			ReadFunction
 		}
 		static private class Pool
 		{
@@ -287,5 +341,10 @@ namespace Parlor.Game
 			seconds = Seconds;
 			isScaled = IsScaled;
 		}
+	}
+	public enum AsyncOperationEndType
+	{
+		Abort,
+		Complete
 	}
 }

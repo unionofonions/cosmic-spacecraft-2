@@ -45,6 +45,7 @@ namespace Parlor.Game
 		}
 		private IEnumerator SpawnAsync()
 		{
+			yield return null;
 			for (var i = 0; i < m_Levels.Length - 1; ++i)
 			{
 				if (m_Levels[i] != null)
@@ -60,6 +61,7 @@ namespace Parlor.Game
 			{
 				while (true)
 				{
+					OnBeginLevel?.Invoke(m_Levels[^1]);
 					foreach (var wave in m_Levels[^1].Waves)
 					{
 						yield return ProcessWave(wave);

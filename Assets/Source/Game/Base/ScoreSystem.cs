@@ -12,7 +12,7 @@ namespace Parlor.Game
 
 		static private ScoreSystem s_Instance;
 		static private int s_CurrentScore;
-		static private bool s_IsHighestScoreChanged;
+		static private bool s_DontNotifyHighestScore;
 
 		[SerializeField, Unsigned]
 		private int m_HighestScore;
@@ -51,11 +51,9 @@ namespace Parlor.Game
 			{
 				if (Instance != null)
 				{
-					var prev = Instance.m_HighestScore;
 					Instance.m_HighestScore = value;
-					if (prev != 0f && !s_IsHighestScoreChanged)
+					if (!s_DontNotifyHighestScore)
 					{
-						s_IsHighestScoreChanged = true;
 						OnHighestScoreChanged?.Invoke(value);
 					}
 				}
@@ -68,7 +66,7 @@ namespace Parlor.Game
 			Domain.GetSpawnSystem().OnBeginSpawn += delegate
 			{
 				CurrentScore = 0;
-				s_IsHighestScoreChanged = false;
+				s_DontNotifyHighestScore = HighestScore == 0;
 			};
 			Actor.OnDeath += (instigator, victim) =>
 			{
@@ -78,6 +76,7 @@ namespace Parlor.Game
 					if (CurrentScore > HighestScore)
 					{
 						HighestScore = CurrentScore;
+						s_DontNotifyHighestScore = true;
 					}
 				}
 			};

@@ -7,6 +7,7 @@ namespace Parlor.Game
 
 	static public class Domain
 	{
+		static private GameSystem? s_GameSystem;
 		static private InputSystem? s_InputSystem;
 		static private CameraSystem? s_CameraSystem;
 		static private BoundarySystem? s_BoundarySystem;
@@ -16,6 +17,10 @@ namespace Parlor.Game
 		static private Player? s_Player;
 		static private NotificationSystem? s_NotificationSystem;
 
+		static public GameSystem GetGameSystem()
+		{
+			return LoadSystem(cache: ref s_GameSystem);
+		}
 		static public InputSystem GetInputSystem()
 		{
 			return LoadSystem(cache: ref s_InputSystem);

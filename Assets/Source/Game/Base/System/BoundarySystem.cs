@@ -24,7 +24,7 @@ namespace Parlor.Game
 
 		private void OnTriggerExit2D(Collider2D collision)
 		{
-			if (collision.TryGetComponent<IBoundaryItem>(out _) /*&& collision.gameObejct.activeSelf*/)
+			if (collision.TryGetComponent<IDestroyOnExitBoundary>(out _))
 			{
 				collision.gameObject.SetActive(false);
 			}
@@ -34,5 +34,5 @@ namespace Parlor.Game
 			return m_SpawnPoints.Provide();
 		}
 	}
-	public interface IBoundaryItem { }
+	public interface IDestroyOnExitBoundary { }
 }

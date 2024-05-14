@@ -21,6 +21,10 @@ namespace Parlor.Game
 		[SerializeField, Percentage]
 		private float m_DamageDeviation;
 		[SerializeField]
+		private float m_CritChance;
+		[SerializeField, MinOne]
+		private float m_CritDamage;
+		[SerializeField]
 		private Quantity m_Health;
 		[SerializeField, Unsigned]
 		private Quantity m_Shield;
@@ -59,6 +63,22 @@ namespace Parlor.Game
 			set
 			{
 				SetProperty(ref m_DamageDeviation, Mathf.Clamp(value, 0.0f, 1.0f));
+			}
+		}
+		public float CritChance
+		{
+			get => m_CritChance;
+			set
+			{
+				SetProperty(ref m_CritChance, value);
+			}
+		}
+		public float CritDamage
+		{
+			get => m_CritDamage;
+			set
+			{
+				SetProperty(ref m_CritDamage, Mathf.Max(value, 1f));
 			}
 		}
 		public Quantity Health
@@ -129,22 +149,23 @@ namespace Parlor.Game
 		}
 		public virtual void Respawn()
 		{
-			Health = Quantity.Full(m_Health.Max);
 			gameObject.SetActive(true);
+			Health = Quantity.Full(m_Health.Max);
 		}
 		public void TakeDamage(Actor instigator, Vector3 hitPosition)
 		{
 			if (instigator == null || IsDead()) return;
 			var rawDamage = instigator.Damage;
 			rawDamage *= 1f + Random.Single(-instigator.m_DamageDeviation, instigator.m_DamageDeviation);
-			rawDamage = Mathf.Max(rawDamage, 0f);
+			var isCrit = Random.Boolean(instigator.CritChance);
+			if (isCrit) rawDamage *= instigator.CritDamage;
 			var takenDamage = Mathf.Max(rawDamage - m_Shield.Current, 0f);
 			var absorbedDamage = rawDamage - takenDamage;
 			Shield = new(m_Shield.Current - absorbedDamage, m_Shield.Max);
 			Health = new(m_Health.Current - takenDamage, m_Health.Max);
 			if (Health.Current <= 0f) Die(instigator);
 			else PlayHitEffects(hitPosition);
-			OnReaction?.Invoke(new(instigator, victim: this, dealtDamage: takenDamage, hitPosition));
+			OnReaction?.Invoke(new(instigator, victim: this, dealtDamage: takenDamage, isCrit, hitPosition));
 		}
 		public virtual void Die(Actor instigator)
 		{
@@ -212,13 +233,15 @@ namespace Parlor.Game
 		public readonly Actor Instigator;
 		public readonly Actor Victim;
 		public readonly float DealtDamage;
+		public readonly bool IsCrit;
 		public readonly Vector3 HitPosition;
 
-		public ReactionInfo(Actor instigator, Actor victim, float dealtDamage, Vector3 hitPosition)
+		public ReactionInfo(Actor instigator, Actor victim, float dealtDamage, bool isCrit, Vector3 hitPosition)
 		{
 			Instigator = instigator;
 			Victim = victim;
 			DealtDamage = dealtDamage;
+			IsCrit = isCrit;
 			HitPosition = hitPosition;
 		}
 	}

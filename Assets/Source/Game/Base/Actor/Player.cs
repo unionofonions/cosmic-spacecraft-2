@@ -67,6 +67,8 @@ namespace Parlor.Game
 			{
 				Damage = m_PlayerInfo.Damage;
 				DamageDeviation = m_PlayerInfo.DamageDeviation;
+				CritChance = m_PlayerInfo.CritChance;
+				CritDamage = m_PlayerInfo.CritDamage;
 				Health = Quantity.Full(m_PlayerInfo.Health);
 				Shield = m_PlayerInfo.Shield;
 				MoveSpeed = m_PlayerInfo.MoveSpeed;

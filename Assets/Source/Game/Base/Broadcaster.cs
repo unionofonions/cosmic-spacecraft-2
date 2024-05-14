@@ -16,7 +16,7 @@ namespace Parlor.Game
 			};
 			Domain.GetSpawnSystem().OnBeginSpawn += delegate
 			{
-				BroadcastKeyword("game_started", delay: 1f);
+				BroadcastKeyword("game_started", delay: 0.6f);
 			};
 			Domain.GetSpawnSystem().OnBeginLevel += level =>
 			{

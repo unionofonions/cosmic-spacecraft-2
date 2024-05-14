@@ -193,3 +193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10708e08f47946e4b9c5e12ee3afa3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PickSfxMap:
+    m_Values:
+    - m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
+      m_Id: 4
+    - m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
+      m_Id: 4

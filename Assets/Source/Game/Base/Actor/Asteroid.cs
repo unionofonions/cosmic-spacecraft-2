@@ -7,7 +7,7 @@ namespace Parlor.Game
 
 	[RequireComponent(typeof(Rigidbody2D))]
 	[EditorHandled]
-	public class Asteroid : Actor, IBoundaryItem
+	public class Asteroid : Actor, IDestroyOnExitBoundary
 	{
 		private const float c_LimitedRandomDirectionMaxAngle = 40f;
 

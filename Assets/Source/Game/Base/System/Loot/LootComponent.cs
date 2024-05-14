@@ -5,11 +5,13 @@ namespace Parlor.Game
 
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(SpriteRenderer), typeof(Animator), typeof(Collider2D))]
-	public sealed class LootComponent : MonoBehaviour, IBoundaryItem
+	public sealed class LootComponent : MonoBehaviour, IDestroyOnExitBoundary
 	{
 		static private readonly int s_HealthHash;
 		static private readonly int s_ShieldHash;
 
+		[SerializeField]
+		private EnumMap<LootType, SfxReference> m_PickSfxMap;
 		private LootType m_LootType;
 		private float m_Amount;
 		private Animator m_Animator;
@@ -39,6 +41,7 @@ namespace Parlor.Game
 						if (!shielded) return;
 						break;
 				}
+				PlaysSfx();
 				gameObject.SetActive(false);
 			}
 		}
@@ -60,11 +63,16 @@ namespace Parlor.Game
 			m_LootType = LootType.Shield;
 			m_Amount = amount;
 		}
+		private void PlaysSfx()
+		{
+			var sfx = m_PickSfxMap[(int)m_LootType];
+			sfx.PlayEffect();
+		}
 
 		private enum LootType
 		{
 			Health,
-			Shield,
+			Shield
 		}
 	}
 }
