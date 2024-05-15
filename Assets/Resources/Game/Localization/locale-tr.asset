@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: locale-tr
   m_EditorClassIdentifier: 
   m_KeywordTextPairs:
-  - Keyword: game_started
-    Text: HAZIRLAN!
   - Keyword: level_started
     Text: GIRIS YAPILIYOR
   - Keyword: new_record

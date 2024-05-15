@@ -198,7 +198,7 @@ namespace Parlor.Game
 				Timer -= GetDeltaTime();
 				if (Timer <= 0f)
 				{
-					Action?.Invoke();
+					Action.Invoke();
 					return false;
 				}
 				return true;
@@ -224,11 +224,11 @@ namespace Parlor.Game
 				if (Timer >= 1f)
 				{
 					y = Function.Evaluate(1f);
-					Actionf?.Invoke(y);
+					Actionf.Invoke(y);
 					return false;
 				}
 				y = Function.Evaluate(Timer);
-				Actionf?.Invoke(y);
+				Actionf.Invoke(y);
 				return true;
 			}
 			private float GetDeltaTime()
@@ -291,12 +291,15 @@ namespace Parlor.Game
 			static public void SustendAt(int index)
 			{
 				Contract.Assert((uint)index < (uint)Count);
-				var suspending = Collection[index];
-				var swapping = Collection[--Count];
-				Collection[index] = swapping;
-				Collection[Count] = suspending;
-				suspending.Offset = Count;
-				swapping.Offset = index;
+				if (--Count != 0)
+				{
+					var suspending = Collection[index];
+					var swapping = Collection[Count];
+					Collection[index] = swapping;
+					Collection[Count] = suspending;
+					suspending.Offset = Count;
+					swapping.Offset = index;
+				}
 			}
 			static private void InitializeCollection(int low)
 			{

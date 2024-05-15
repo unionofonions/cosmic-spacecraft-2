@@ -13,33 +13,30 @@ namespace Parlor.Game
 			Domain.GetSpawnSystem().OnBeginSpawn += delegate
 			{
 				Domain.GetNotificationSystem().HideText();
-			};
-			Domain.GetSpawnSystem().OnBeginSpawn += delegate
-			{
-				BroadcastKeyword("game_started", delay: 0.6f);
+				BroadcastKeyword("spawn_started", animationName: "spawn_started");
 			};
 			Domain.GetSpawnSystem().OnBeginLevel += level =>
 			{
 				if (!String.IsNullOrEmpty(level.LevelName))
 				{
-					BroadcastText(
-						$"{TranslationSystem.KeywordToText("level_started")}\n{TranslationSystem.KeywordToText(level.LevelName)}",
-						delay: 0f);
+					var levelStarted = $"<size=60%>{TranslationSystem.KeywordToText("level_started")}";
+					var levelName = $"<size=115%>{TranslationSystem.KeywordToText(level.LevelName)}";
+					BroadcastText($"{levelStarted}\n{levelName}", animationName: "level_started");
 				}
 			};
 			ScoreSystem.OnHighestScoreChanged += score =>
 			{
-				BroadcastKeyword("new_record", delay: 0f);
+				BroadcastKeyword("new_record", animationName: null);
 			};
 		}
-		static private void BroadcastText(string text, float delay)
+		static private void BroadcastText(string text, string animationName)
 		{
-			Domain.GetNotificationSystem().ShowText(text, delay: delay);
+			Domain.GetNotificationSystem().ShowText(text, animationName);
 		}
-		static private void BroadcastKeyword(string keyword, float delay)
+		static private void BroadcastKeyword(string keyword, string animationName)
 		{
 			var text = TranslationSystem.KeywordToText(keyword);
-			BroadcastText(text, delay);
+			BroadcastText(text, animationName);
 		}
 	}
 }

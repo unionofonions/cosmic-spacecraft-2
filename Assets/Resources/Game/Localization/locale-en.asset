@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: locale-en
   m_EditorClassIdentifier: 
   m_KeywordTextPairs:
-  - Keyword: game_started
+  - Keyword: spawn_started
     Text: GET READY!
   - Keyword: level_started
     Text: NOW ENTERING
   - Keyword: new_record
     Text: NEW RECORD!
+  - Keyword: level_1
+    Text: SHIP GRAVEYARD

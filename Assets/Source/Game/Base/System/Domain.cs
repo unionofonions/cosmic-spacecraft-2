@@ -15,6 +15,7 @@ namespace Parlor.Game
 		static private LootSystem? s_LootSystem;
 		static private SpawnSystem? s_SpawnSystem;
 		static private Player? s_Player;
+		static private ScreenEffectSystem? s_ScreenEffectSystem;
 		static private NotificationSystem? s_NotificationSystem;
 
 		static public GameSystem GetGameSystem()
@@ -48,6 +49,10 @@ namespace Parlor.Game
 		static public Player GetPlayer()
 		{
 			return LoadSystem(cache: ref s_Player);
+		}
+		static public ScreenEffectSystem GetScreenEffectSystem()
+		{
+			return LoadSystem(cache: ref s_ScreenEffectSystem);
 		}
 		static public NotificationSystem GetNotificationSystem()
 		{

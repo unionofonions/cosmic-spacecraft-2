@@ -1,6 +1,7 @@
 
 namespace Parlor.Game
 {
+	using System.Collections;
 	using UnityEngine;
 
 	[DisallowMultipleComponent]
@@ -16,7 +17,6 @@ namespace Parlor.Game
 		[SerializeField, NotDefault]
 		private Sprite[] m_TransitionSprites;
 		private int m_TransitionSpriteIndex;
-		private AsyncOperation m_TransitionOp;
 		private Sprite m_DefaultSprite;
 		private SpriteRenderer m_Renderer;
 
@@ -42,7 +42,7 @@ namespace Parlor.Game
 		{
 			if (m_TransitionSpriteIndex == 0)
 			{
-				m_TransitionOp.Abort();
+				StopAllCoroutines();
 				m_Renderer.sprite = m_DefaultSprite;
 				SetRendererAlpha(1f);
 				m_TransitionRenderer.gameObject.SetActive(false);
@@ -58,26 +58,23 @@ namespace Parlor.Game
 		{
 			if (sprite != null)
 			{
-				m_TransitionOp.Abort();
 				m_TransitionRenderer.sprite = sprite;
 				SetTransitionRendererAlpha(0f);
 				m_TransitionRenderer.gameObject.SetActive(true);
-				m_TransitionOp = AsyncOperation.ReadFunction(
-					TransitionSprite,
-					m_TransitionFunction,
-					AsyncTime.Scaled(m_TransitionDuration))
-					.OnEnd(OnEndTransition);
+				StartCoroutine(TransitionSpriteAsync());
 			}
-		}
-		private void TransitionSprite(float y)
-		{
-			SetRendererAlpha(1f - y);
-			SetTransitionRendererAlpha(y);
-		}
-		private void OnEndTransition(AsyncOperationEndType endType)
-		{
-			if (endType is AsyncOperationEndType.Complete)
+			IEnumerator TransitionSpriteAsync()
 			{
+				var timer = 0f;
+				var tMul = 1f / m_TransitionDuration;
+				while (timer < m_TransitionDuration)
+				{
+					timer += Time.deltaTime;
+					var y = m_TransitionFunction.Evaluate(timer * tMul);
+					SetRendererAlpha(1f - y);
+					SetTransitionRendererAlpha(y);
+					yield return null;
+				}
 				m_Renderer.sprite = m_TransitionRenderer.sprite;
 				SetRendererAlpha(1f);
 				m_TransitionRenderer.gameObject.SetActive(false);
