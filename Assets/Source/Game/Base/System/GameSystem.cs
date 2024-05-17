@@ -15,6 +15,7 @@ namespace Parlor.Game
 		{
 			if (m_GameStatus != GameStatus.Playing)
 			{
+				m_GameStatus = GameStatus.Playing;
 				Time.timeScale = 1.0f;
 				OnGameStatusChanged?.Invoke(GameStatus.Playing);
 			}
@@ -23,6 +24,7 @@ namespace Parlor.Game
 		{
 			if (m_GameStatus != GameStatus.Paused)
 			{
+				m_GameStatus = GameStatus.Paused;
 				Time.timeScale = 0.0f;
 				OnGameStatusChanged?.Invoke(GameStatus.Paused);
 			}

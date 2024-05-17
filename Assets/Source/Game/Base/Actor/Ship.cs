@@ -56,7 +56,10 @@ namespace Parlor.Game
 				if (elem == null) continue;
 				fired |= elem.UpdateGun(this);
 			}
-			if (fired) m_FireSfx.PlayEffect();
+			if (fired)
+			{
+				Domain.GetAudioSystem().PlayEffect(m_FireSfx);
+			}
 		}
 	}
 }

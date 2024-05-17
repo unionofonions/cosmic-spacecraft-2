@@ -49,7 +49,7 @@ namespace Parlor.Game.UI
 			m_Image.color = m_ButtonInfo.ImageHoverColor;
 			if (m_Label != null) m_Label.color = m_ButtonInfo.LabelHoverColor;
 			transform.localScale = Vector3.one * m_ButtonInfo.ImageHoverScale;
-			m_ButtonInfo.HoverSfx.PlayEffect();
+			Domain.GetAudioSystem().PlayEffect(m_ButtonInfo.HoverSfx);
 		}
 		public void OnPointerExit(PointerEventData eventData)
 		{
@@ -74,7 +74,7 @@ namespace Parlor.Game.UI
 			if (eventData.button is PointerEventData.InputButton.Left)
 			{
 				m_OnClick.Invoke();
-				m_ButtonInfo.ClickSfx.PlayEffect();
+				Domain.GetAudioSystem().PlayEffect(m_ButtonInfo.ClickSfx);
 			}
 		}
 		private void ResetProperties()

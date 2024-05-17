@@ -14,8 +14,12 @@ namespace Parlor.Game
 		private float m_CritChance;
 		[SerializeField, MinOne]
 		private float m_CritDamage;
+		[SerializeField]
+		private float m_ArmorPenetration;
 		[SerializeField, MinEpsilon]
 		private float m_Health;
+		[SerializeField]
+		private float m_Armor;
 		[SerializeField]
 		private Quantity m_Shield;
 		[SerializeField, Unsigned]
@@ -47,9 +51,17 @@ namespace Parlor.Game
 		{
 			get => m_CritDamage;
 		}
+		public float ArmorPenetration
+		{
+			get => m_ArmorPenetration;
+		}
 		public float Health
 		{
 			get => m_Health;
+		}
+		public float Armor
+		{
+			get => m_Armor;
 		}
 		public Quantity Shield
 		{

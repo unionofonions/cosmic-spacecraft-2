@@ -10,6 +10,8 @@ namespace Parlor.Game
 	[RequireComponent(typeof(Camera))]
 	public sealed class CameraSystem : MonoBehaviour
 	{
+		[SerializeField]
+		private bool m_EnableCameraShake;
 		[SerializeField, NotDefault]
 		private TfxComponent m_TfxComponent;
 		private Camera m_Camera;
@@ -22,17 +24,16 @@ namespace Parlor.Game
 				return m_Camera;
 			}
 		}
-		public float FieldOfView
+		public bool EnableCameraShake
 		{
-			get
-			{
-				LazyAwake();
-				return m_Camera.fieldOfView;
-			}
+			get => m_EnableCameraShake;
 			set
 			{
-				LazyAwake();
-				m_Camera.fieldOfView = value;
+				m_EnableCameraShake = value;
+				if (!value)
+				{
+					StopShake();
+				}
 			}
 		}
 
@@ -45,7 +46,7 @@ namespace Parlor.Game
 		}
 		public void Shake(TfxReference reference)
 		{
-			if (m_TfxComponent != null)
+			if (m_EnableCameraShake && m_TfxComponent != null)
 			{
 				m_TfxComponent.Play(reference);
 			}

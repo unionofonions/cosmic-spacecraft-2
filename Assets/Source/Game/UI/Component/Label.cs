@@ -23,8 +23,8 @@ namespace Parlor.Game.UI
 		{
 			if (m_Dirty)
 			{
-				UpdateText();
 				m_Dirty = false;
+				UpdateText();
 			}
 		}
 		private void UpdateText()
@@ -37,7 +37,10 @@ namespace Parlor.Game.UI
 			{
 				UpdateText();
 			}
-			else m_Dirty = true;
+			else
+			{
+				m_Dirty = true;
+			}
 		}
 	}
 }

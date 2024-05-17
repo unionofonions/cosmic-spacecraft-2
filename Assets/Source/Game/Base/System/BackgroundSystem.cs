@@ -67,10 +67,10 @@ namespace Parlor.Game
 			{
 				var timer = 0f;
 				var tMul = 1f / m_TransitionDuration;
-				while (timer < m_TransitionDuration)
+				while (timer < 1f)
 				{
-					timer += Time.deltaTime;
-					var y = m_TransitionFunction.Evaluate(timer * tMul);
+					timer += Time.deltaTime * tMul;
+					var y = m_TransitionFunction.Evaluate(timer);
 					SetRendererAlpha(1f - y);
 					SetTransitionRendererAlpha(y);
 					yield return null;

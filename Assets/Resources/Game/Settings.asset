@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3afa131d9c6e594f88aab4adc02130d, type: 3}
-  m_Name: ScoreSystem
+  m_Script: {fileID: 11500000, guid: 381436f0f29f9604f9b999b79f3ac709, type: 3}
+  m_Name: Settings
   m_EditorClassIdentifier: 
-  m_HighestScore: 0
+  m_EffectVolume: 1
+  m_MusicVolume: 1
+  m_EnableCameraShake: 1

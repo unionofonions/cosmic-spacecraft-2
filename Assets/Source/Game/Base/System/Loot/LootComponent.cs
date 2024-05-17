@@ -66,7 +66,7 @@ namespace Parlor.Game
 		private void PlaysSfx()
 		{
 			var sfx = m_PickSfxMap[(int)m_LootType];
-			sfx.PlayEffect();
+			Domain.GetAudioSystem().PlayEffect(sfx);
 		}
 
 		private enum LootType

@@ -25,7 +25,11 @@ namespace Parlor.Game
 		[SerializeField, MinOne]
 		private float m_CritDamage;
 		[SerializeField]
+		private float m_ArmorPenetration;
+		[SerializeField]
 		private Quantity m_Health;
+		[SerializeField]
+		private float m_Armor;
 		[SerializeField, Unsigned]
 		private Quantity m_Shield;
 		[SerializeField, Unsigned]
@@ -81,6 +85,14 @@ namespace Parlor.Game
 				SetProperty(ref m_CritDamage, Mathf.Max(value, 1f));
 			}
 		}
+		public float ArmorPenetration
+		{
+			get => m_ArmorPenetration;
+			set
+			{
+				SetProperty(ref m_ArmorPenetration, value);
+			}
+		}
 		public Quantity Health
 		{
 			get => m_Health;
@@ -88,6 +100,14 @@ namespace Parlor.Game
 			{
 				SetProperty(ref m_Health, value);
 				UpdateBodyVisual();
+			}
+		}
+		public float Armor
+		{
+			get => m_Armor;
+			set
+			{
+				SetProperty(ref m_Armor, value);
 			}
 		}
 		public Quantity Shield
@@ -157,6 +177,8 @@ namespace Parlor.Game
 			if (instigator == null || IsDead()) return;
 			var rawDamage = instigator.Damage;
 			rawDamage *= 1f + Random.Single(-instigator.m_DamageDeviation, instigator.m_DamageDeviation);
+			var armor = m_Armor * StatsSystem.CalculateArmorPenetrationFactor(instigator.m_ArmorPenetration);
+			rawDamage *= 1f - StatsSystem.CalculateArmorFactor(armor);
 			var isCrit = Random.Boolean(instigator.CritChance);
 			if (isCrit) rawDamage *= instigator.CritDamage;
 			var takenDamage = Mathf.Max(rawDamage - m_Shield.Current, 0f);
@@ -218,7 +240,7 @@ namespace Parlor.Game
 		{
 			m_DeathAfx.Play(transform.position);
 			Domain.GetCameraSystem().Shake(m_DeathTfx);
-			m_DeathSfx.PlayEffect();
+			Domain.GetAudioSystem().PlayEffect(m_DeathSfx);
 		}
 	}
 	public enum ActorFaction

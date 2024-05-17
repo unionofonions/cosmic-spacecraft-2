@@ -21,3 +21,5 @@ MonoBehaviour:
     Text: NEW RECORD!
   - Keyword: level_1
     Text: SHIP GRAVEYARD
+  - Keyword: settings
+    Text: SETTINGS

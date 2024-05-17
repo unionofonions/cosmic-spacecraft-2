@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - _ScrollSpeed: 0.01
     - _Timer: 19.641638
-    - _UnscaledTime: 6.4157567
+    - _UnscaledTime: 11.985124
     m_Colors:
     - _Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
   m_BuildTextureStacks: []

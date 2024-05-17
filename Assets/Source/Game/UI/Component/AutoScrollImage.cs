@@ -8,19 +8,19 @@ namespace Parlor.Game
 	[RequireComponent(typeof(Image))]
 	public class AutoScrollImage : MonoBehaviour
 	{
-		private int m_TimerHash;
+		private int m_UnscaledTimeHash;
 		private Material m_Material;
 
 		protected void Awake()
 		{
 			m_Material = GetComponent<Image>().material;
-			m_TimerHash = Shader.PropertyToID("_UnscaledTime");
+			m_UnscaledTimeHash = Shader.PropertyToID("_UnscaledTime");
 		}
 		private void Update()
 		{
 			if (m_Material != null)
 			{
-				m_Material.SetFloat(m_TimerHash, Time.unscaledTime);
+				m_Material.SetFloat(m_UnscaledTimeHash, Time.unscaledTime);
 			}
 		}
 	}

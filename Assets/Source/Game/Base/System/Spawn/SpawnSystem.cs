@@ -14,7 +14,6 @@ namespace Parlor.Game
 
 		[SerializeField, NotDefault]
 		private LevelInfo[] m_Levels;
-		[SerializeField, ReadOnly]
 		private int m_ActiveEnemyCount;
 
 		private void Awake()
@@ -29,18 +28,24 @@ namespace Parlor.Game
 		}
 		public void BeginSpawn()
 		{
+			UnloadSystems();
 			ResetSystems();
+			Domain.GetGameSystem().ResumeGame();
 			StopAllCoroutines();
 			StartCoroutine(SpawnAsync());
 			OnBeginSpawn?.Invoke();
 		}
-		private void ResetSystems()
+		public void UnloadSystems()
 		{
-			Domain.GetPlayer().Respawn();
+			Domain.GetPlayer().gameObject.SetActive(false);
 			Domain.GetCameraSystem().StopShake();
 			ActorProvider.ReturnAll();
 			BulletProvider.ReturnAll();
 			AfxHandler.StopAll();
+		}
+		private void ResetSystems()
+		{
+			Domain.GetPlayer().Respawn();
 			m_ActiveEnemyCount = 0;
 		}
 		private IEnumerator SpawnAsync()

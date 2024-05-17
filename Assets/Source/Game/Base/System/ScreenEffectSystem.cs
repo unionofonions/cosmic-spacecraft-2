@@ -10,19 +10,25 @@ namespace Parlor.Game
 	{
 		[SerializeField]
 		private Curve m_FadeInCurve;
+		[SerializeField, Unsigned]
+		private float m_IntroFadeInTime;
 		[SerializeField, NotDefault]
 		private Image m_Image;
 
 		private void Awake()
 		{
-			if (Time.frameCount == 0)
+			Domain.GetSpawnSystem().OnBeginSpawn += delegate
 			{
-				gameObject.SetActive(false);
-			}
+				FadeIn(m_IntroFadeInTime);
+			};
+			gameObject.SetActive(false);
 		}
 		public void FadeIn(float duration)
 		{
-			if (m_Image == null) return;
+			if (duration <= 0f || m_Image == null)
+			{
+				return;
+			}
 			m_Image.color = Color.black;
 			gameObject.SetActive(true);
 			StopAllCoroutines();
@@ -31,7 +37,7 @@ namespace Parlor.Game
 			{
 				var timer = 0f;
 				var tMul = 1f / duration;
-				while (timer < duration)
+				while (timer < 1f)
 				{
 					timer += Time.unscaledDeltaTime * tMul;
 					var y = m_FadeInCurve.Evaluate(timer);

@@ -41,24 +41,27 @@ namespace Parlor.Editor
 							break;
 					}
 				}
-				switch (Mode(property))
+				if (property.isExpanded)
 				{
-					case BankMode.NonRepRandom:
-						++EditorGUI.indentLevel;
-						var thresholdProp = property.PropertyOrThrow("m_Threshold");
-						rect.NewLine(property);
-						rect.StretchHeight();
-						EditorGUI.PropertyField(rect, thresholdProp);
-						--EditorGUI.indentLevel;
-						break;
-					case BankMode.FullyWeighted:
-						++EditorGUI.indentLevel;
-						var totalWeight = property.PropertyOrThrow("m_TotalWeight");
-						rect.NewLine(property);
-						rect.StretchHeight();
-						EditorGUI.PropertyField(rect, totalWeight);
-						--EditorGUI.indentLevel;
-						break;
+					switch (Mode(property))
+					{
+						case BankMode.NonRepRandom:
+							++EditorGUI.indentLevel;
+							var thresholdProp = property.PropertyOrThrow("m_Threshold");
+							rect.NewLine(property);
+							rect.StretchHeight();
+							EditorGUI.PropertyField(rect, thresholdProp);
+							--EditorGUI.indentLevel;
+							break;
+						case BankMode.FullyWeighted:
+							++EditorGUI.indentLevel;
+							var totalWeight = property.PropertyOrThrow("m_TotalWeight");
+							rect.NewLine(property);
+							rect.StretchHeight();
+							EditorGUI.PropertyField(rect, totalWeight);
+							--EditorGUI.indentLevel;
+							break;
+					}
 				}
 			}
 		}
@@ -69,7 +72,10 @@ namespace Parlor.Editor
 			else
 			{
 				var ret = base.GetHeight(property, label);
-				if (Mode(property) is not BankMode.FullyRandom) ret += EditorGUIUtility.singleLineHeight;
+				if (Mode(property) is not BankMode.FullyRandom && property.isExpanded)
+				{
+					ret += EditorGUIUtility.singleLineHeight;
+				}
 				return ret;
 			}
 		}

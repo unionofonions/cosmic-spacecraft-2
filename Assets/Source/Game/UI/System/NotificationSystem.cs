@@ -20,14 +20,13 @@ namespace Parlor.Game.UI
 
 		private void Awake()
 		{
-			if (m_Label == null)
+			if (m_Label != null)
 			{
-				return;
+				m_Animator = GetComponent<Animator>();
+				gameObject.SetActive(false);
+				m_TextQueue = new();
+				m_Valid = true;
 			}
-			m_Animator = GetComponent<Animator>();
-			gameObject.SetActive(false);
-			m_TextQueue = new();
-			m_Valid = true;
 		}
 		public void ShowText(string text, [Optional] string animationName)
 		{
