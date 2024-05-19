@@ -1,11 +1,12 @@
 
 namespace Parlor.Game
 {
+	using Parlor.Diagnostics;
 	using System.Reflection;
 	using UnityEngine;
 	using UnityEngine.UI;
-	using Parlor.Diagnostics;
 
+	[DisallowMultipleComponent]
 	public sealed class StatBar : MonoBehaviour
 	{
 		[SerializeField, NotDefault]
@@ -27,6 +28,10 @@ namespace Parlor.Game
 		{
 			m_Target = Domain.GetPlayer();
 			m_PropertyInfo = typeof(Player).GetProperty(m_PropertyName);
+			if (m_PropertyInfo == null)
+			{
+				Log.Warning($"Property '{m_PropertyName}' not found.");
+			}
 		}
 		private void OnEnable()
 		{
@@ -41,8 +46,8 @@ namespace Parlor.Game
 				if (obj is float single) value = single; else
 				if (obj is int int32) value = int32; else
 				if (obj is Quantity quantity) value = quantity.Max;
-				else value = 0f;
-				var ratio = value / m_ValueRange.Delta;
+				else value = InvalidPropertyType();
+				var ratio = Mathf.InverseLerp(m_ValueRange.Start, m_ValueRange.End, value);
 				if (m_Reverse) ratio = 1f - ratio;
 				m_Fill.fillAmount = ratio;
 				UpdateColor(ratio);
@@ -51,6 +56,11 @@ namespace Parlor.Game
 		private void UpdateColor(float ratio)
 		{
 			m_Fill.color = Color.Lerp(m_ColorMin, m_ColorMax, ratio);
+		}
+		private float InvalidPropertyType()
+		{
+			Log.Warning($"Type of property '{m_PropertyName}' is invalid.");
+			return 0f;
 		}
 	}
 }

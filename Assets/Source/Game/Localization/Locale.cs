@@ -15,6 +15,25 @@ namespace Parlor.Game.Localization
 		public string KeywordToText(string keyword)
 		{
 			var hash = StringToHash(keyword);
+			var coll = GetOrderedKeywordTextPairs();
+			var low = 0;
+			var high = coll.Length - 1;
+			while (low <= high)
+			{
+				var mid = low + (high - low) / 2;
+				var _hash = coll[mid].Hash;
+				if (hash > _hash) low = mid + 1;
+				else if (hash < _hash) high = mid - 1;
+				else return coll[mid].Text;
+			}
+			return null;
+		}
+		private int StringToHash(string str)
+		{
+			return Animator.StringToHash(str);
+		}
+		private KeywordTextPair[] GetOrderedKeywordTextPairs()
+		{
 			if (m_OrderedKeywordTextPairs == null)
 			{
 				m_OrderedKeywordTextPairs = new KeywordTextPair[m_KeywordTextPairs.Length];
@@ -25,21 +44,7 @@ namespace Parlor.Game.Localization
 				}
 				Array.Sort(m_OrderedKeywordTextPairs, (e1, e2) => e1.Hash.CompareTo(e2.Hash));
 			}
-			var low = 0;
-			var high = m_OrderedKeywordTextPairs.Length - 1;
-			while (low <= high)
-			{
-				var mid = low + (high - low) / 2;
-				var _hash = m_OrderedKeywordTextPairs[mid].Hash;
-				if (hash > _hash) low = mid + 1;
-				else if (hash < _hash) high = mid - 1;
-				else return m_OrderedKeywordTextPairs[mid].Text;
-			}
-			return null;
-		}
-		private int StringToHash(string str)
-		{
-			return Animator.StringToHash(str);
+			return m_OrderedKeywordTextPairs;
 		}
 
 		[Serializable]

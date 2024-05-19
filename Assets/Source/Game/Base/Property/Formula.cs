@@ -28,7 +28,7 @@ namespace Parlor.Game
 		}
 		static public Formula EaseIn
 		{
-			get => s_EaseIn ??= new(x => x * x);
+			get => s_EaseIn ??= new(x => x * x * x);
 		}
 		static public Formula EaseOut
 		{
@@ -36,7 +36,15 @@ namespace Parlor.Game
 		}
 		static public Formula EaseInOut
 		{
-			get => s_EaseInOut ??= new(x => x < 0.5f ? 2 * x * x : 1 - Mathf.Pow(-2 * x + 2, 2) / 2);
+			get
+			{
+				//return s_EaseInOut ??= new(x => x < 0.5f ? 2 * x * x : 1 - Mathf.Pow(-2 * x + 2, 2) / 2);
+				return s_EaseInOut ??= new(x =>
+				{
+					x = Mathf.Clamp01(x);
+					return x * x * (3f - 2f * x);
+				});
+			}
 		}
 
 		public float Evaluate(float x)

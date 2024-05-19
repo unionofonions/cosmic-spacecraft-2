@@ -83,7 +83,7 @@ MonoBehaviour:
       m_Mode: 0
       m_Threshold: 0
       m_TotalWeight: 0
-    m_VolumeScale: 0.3
+    m_VolumeScale: 0.45
   - m_Name: music/02
     m_Id: 6
     m_Valid: 1
@@ -96,7 +96,7 @@ MonoBehaviour:
       m_Mode: 0
       m_Threshold: 0
       m_TotalWeight: 0
-    m_VolumeScale: 0.3
+    m_VolumeScale: 0.45
   - m_Name: music/03
     m_Id: 7
     m_Valid: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
       m_Mode: 0
       m_Threshold: 0
       m_TotalWeight: 0
-    m_VolumeScale: 0.3
+    m_VolumeScale: 0.45
   - m_Name: music/04
     m_Id: 8
     m_Valid: 1
@@ -122,5 +122,5 @@ MonoBehaviour:
       m_Mode: 0
       m_Threshold: 0
       m_TotalWeight: 0
-    m_VolumeScale: 0.3
+    m_VolumeScale: 0.45
   m_NextId: 8

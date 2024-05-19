@@ -12,11 +12,11 @@ namespace Parlor.Game
 		static private InputSystem? s_InputSystem;
 		static private CameraSystem? s_CameraSystem;
 		static private BoundarySystem? s_BoundarySystem;
-		static private BackgroundSystem? s_BackgroundSystem;
 		static private LootSystem? s_LootSystem;
 		static private SpawnSystem? s_SpawnSystem;
 		static private Player? s_Player;
 		static private ScreenEffectSystem? s_ScreenEffectSystem;
+		static private MusicSystem? s_MusicSystem;
 		static private NotificationSystem? s_NotificationSystem;
 
 		static public GameSystem GetGameSystem()
@@ -39,10 +39,6 @@ namespace Parlor.Game
 		{
 			return LoadSystem(cache: ref s_BoundarySystem);
 		}
-		static public BackgroundSystem GetBackgroundSystem()
-		{
-			return LoadSystem(cache: ref s_BackgroundSystem);
-		}
 		static public LootSystem GetLootSystem()
 		{
 			return LoadSystem(cache: ref s_LootSystem);
@@ -58,6 +54,10 @@ namespace Parlor.Game
 		static public ScreenEffectSystem GetScreenEffectSystem()
 		{
 			return LoadSystem(cache: ref s_ScreenEffectSystem);
+		}
+		static public MusicSystem GetMusicSystem()
+		{
+			return LoadSystem(cache: ref s_MusicSystem);
 		}
 		static public NotificationSystem GetNotificationSystem()
 		{

@@ -30,7 +30,7 @@ namespace Parlor.Game
 		private Quantity m_Health;
 		[SerializeField]
 		private float m_Armor;
-		[SerializeField, Unsigned]
+		[SerializeField]
 		private Quantity m_Shield;
 		[SerializeField, Unsigned]
 		private float m_MoveSpeed;
@@ -197,7 +197,10 @@ namespace Parlor.Game
 		}
 		public bool Heal(float amount)
 		{
-			if (amount <= 0f || m_Health.IsFull) return false;
+			if (amount <= 0f || m_Health.IsFull || IsDead())
+			{
+				return false;
+			}
 			amount = Mathf.Min(amount, m_Health.Max - m_Health.Current);
 			Health = new(m_Health.Current + amount, m_Health.Max);
 			OnAction?.Invoke(subject: this, actionName: "Heal", args: amount);
@@ -205,7 +208,10 @@ namespace Parlor.Game
 		}
 		public bool ShieldUp(float amount)
 		{
-			if (amount <= 0f || m_Shield.IsFull) return false;
+			if (amount <= 0f || m_Shield.IsFull || IsDead())
+			{
+				return false;
+			}
 			amount = Mathf.Min(amount, m_Shield.Max - m_Shield.Current);
 			Shield = new(m_Shield.Current + amount, m_Shield.Max);
 			OnAction?.Invoke(subject: this, actionName: "ShieldUp", args: amount);
