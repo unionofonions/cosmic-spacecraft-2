@@ -1,10 +1,10 @@
 
 namespace Parlor.Game
 {
-	using Parlor.Diagnostics;
 	using System.Reflection;
 	using UnityEngine;
 	using UnityEngine.UI;
+	using Parlor.Diagnostics;
 
 	[DisallowMultipleComponent]
 	public sealed class StatBar : MonoBehaviour

@@ -23,3 +23,11 @@ MonoBehaviour:
     Text: SHIP GRAVEYARD
   - Keyword: settings
     Text: SETTINGS
+  - Keyword: aff_dmg_pos_min
+    Text: SLIGHTLY INCREASES DAMAGE
+  - Keyword: aff_dmg_pos_maj
+    Text: SIGNIFICANTLY INCREASES DAMAGE
+  - Keyword: aff_dmg_neg_min
+    Text: SLIGHTLY DECREASES DAMAGE
+  - Keyword: aff_dmg_neg_maj
+    Text: SIGNIFICANTLY DECREASES DAMAGE

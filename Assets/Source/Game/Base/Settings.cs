@@ -38,6 +38,7 @@ namespace Parlor.Game
 				if (Instance != null)
 				{
 					Instance.m_EffectVolume = Mathf.Clamp01(value);
+					Apply();
 				}
 			}
 		}
@@ -53,6 +54,7 @@ namespace Parlor.Game
 				if (Instance != null)
 				{
 					Instance.m_MusicVolume = Mathf.Clamp01(value);
+					Apply();
 				}
 			}
 		}
@@ -68,7 +70,23 @@ namespace Parlor.Game
 				if (Instance != null)
 				{
 					Instance.m_EnableCameraShake = value;
+					Apply();
 				}
+			}
+		}
+
+		static public void Apply()
+		{
+			var audioSystem = Domain.GetAudioSystem();
+			var cameraSystem = Domain.GetCameraSystem();
+			if (audioSystem != null)
+			{
+				audioSystem.EffectVolume = EffectVolume;
+				audioSystem.MusicVolume = MusicVolume;
+			}
+			if (cameraSystem != null)
+			{
+				cameraSystem.EnableCameraShake = EnableCameraShake;
 			}
 		}
 	}

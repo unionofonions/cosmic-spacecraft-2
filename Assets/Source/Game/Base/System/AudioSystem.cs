@@ -20,7 +20,7 @@ namespace Parlor.Game
 			get
 			{
 				LazyAwake();
-				return m_ReflectedMusicVolume;
+				return m_EffectPlayer.volume;
 			}
 			set
 			{

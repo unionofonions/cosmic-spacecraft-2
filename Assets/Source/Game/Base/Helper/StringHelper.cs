@@ -3,6 +3,7 @@
 namespace Parlor.Game
 {
 	using System;
+	using UnityEngine;
 
 	static public class StringHelper
 	{
@@ -17,6 +18,12 @@ namespace Parlor.Game
 			{
 				return null;
 			}
+		}
+		static public string? Colorize(string? str, Color color, bool close = true)
+		{
+			if (str == null) return null;
+			var hex = ColorUtility.ToHtmlStringRGB(color);
+			return close ? $"<#{hex}>{str}</color>" : $"<#{hex}>{str}";
 		}
 	}
 }

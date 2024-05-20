@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e459f07057987e24a9cf9a61c2ccc6da, type: 3}
+  m_Name: upgrade_collection
+  m_EditorClassIdentifier: 
+  m_Bank:
+    m_Collection:
+    - m_Value:
+        m_Icon: {fileID: 0}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 0}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 1
+        - m_AffixType: 4
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 0}
+        m_Affixes:
+        - m_AffixType: 3
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 0}
+        m_Affixes:
+        - m_AffixType: 10
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    m_Mode: 1
+    m_Threshold: 2
+    m_TotalWeight: 0

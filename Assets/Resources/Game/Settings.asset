@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381436f0f29f9604f9b999b79f3ac709, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  m_EffectVolume: 1
-  m_MusicVolume: 1
-  m_EnableCameraShake: 1
+  m_EffectVolume: 0.5
+  m_MusicVolume: 0.3
+  m_EnableCameraShake: 0

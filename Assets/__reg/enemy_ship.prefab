@@ -388,6 +388,7 @@ MonoBehaviour:
   m_FireSfx:
     m_Library: {fileID: 0}
     m_Id: 0
+  m_Flags: 2
   m_Guns:
   - {fileID: 2663995482445360779}
   m_RotationSpeed: 100

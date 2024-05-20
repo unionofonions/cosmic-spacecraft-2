@@ -1,12 +1,15 @@
 
 namespace Parlor.Game
 {
+	using System;
 	using UnityEngine;
 
 	[DisallowMultipleComponent]
 	public class EnemyShip : Ship
 	{
 		[Header("EnemyShip")]
+		[SerializeField]
+		private EnemyShipFlags m_Flags;
 		[SerializeField, NotDefault]
 		private Gun[] m_Guns;
 		[SerializeField, MinEpsilon]
@@ -20,6 +23,10 @@ namespace Parlor.Game
 		protected override Gun[] Guns
 		{
 			get => m_Guns;
+		}
+		public EnemyShipFlags Flags
+		{
+			get => m_Flags;
 		}
 
 		protected new void Awake()
@@ -75,5 +82,12 @@ namespace Parlor.Game
 				Quaternion.Euler(0f, 0f, angle),
 				m_RotationSpeed * Time.fixedDeltaTime);
 		}
+	}
+	[Flags]
+	public enum EnemyShipFlags
+	{
+		None = 0x0,
+		Boss = 0x1,
+		PlayerUpgradeOnDeath = 0x2
 	}
 }

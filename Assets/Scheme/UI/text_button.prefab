@@ -244,6 +244,8 @@ MonoBehaviour:
   m_ButtonInfo:
     ImageHoverColor: {r: 0.22521013, g: 0.05268779, b: 0.3018868, a: 1}
     LabelHoverColor: {r: 0.4509804, g: 0.4509804, b: 0.4509804, a: 1}
+    ImageDisabledColor: {r: 0, g: 0, b: 0, a: 1}
+    LabelDisabledColor: {r: 0, g: 0, b: 0, a: 0}
     ImageHoverScale: 1.03
     ImageDownRotation: 0
     HoverSfx:
@@ -252,6 +254,7 @@ MonoBehaviour:
     ClickSfx:
       m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
       m_Id: 3
+  m_Label: {fileID: 0}
 --- !u!1 &7881496399468577075
 GameObject:
   m_ObjectHideFlags: 0
