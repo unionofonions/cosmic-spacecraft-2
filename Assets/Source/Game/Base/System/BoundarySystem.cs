@@ -11,7 +11,7 @@ namespace Parlor.Game
 		[SerializeField, MinEpsilon]
 		private float m_Radius;
 		[SerializeField]
-		private Bank<Vector3> m_SpawnPoints;
+		private Bank<Route> m_Routes;
 
 		public Vector3 Center
 		{
@@ -29,9 +29,9 @@ namespace Parlor.Game
 				collision.gameObject.SetActive(false);
 			}
 		}
-		public Vector3 GetSpawnPoint()
+		public Route GetRoute()
 		{
-			return m_SpawnPoints.Provide();
+			return m_Routes.Provide();
 		}
 	}
 	public interface IDestroyOnExitBoundary { }

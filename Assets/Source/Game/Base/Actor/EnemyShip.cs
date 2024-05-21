@@ -3,21 +3,22 @@ namespace Parlor.Game
 {
 	using System;
 	using UnityEngine;
+	using Parlor.Diagnostics;
 
-	[DisallowMultipleComponent]
+	[EditorHandled]
 	public class EnemyShip : Ship
 	{
 		[Header("EnemyShip")]
 		[SerializeField]
 		private EnemyShipFlags m_Flags;
+		[SerializeField, HideInInspector]
+		private float m_RotationSpeed;
+		[SerializeField, HideInInspector]
+		private bool m_DynamicSpin;
+		[SerializeField]
+		private Route m_Route;
 		[SerializeField, NotDefault]
 		private Gun[] m_Guns;
-		[SerializeField, MinEpsilon]
-		private float m_RotationSpeed;
-		[SerializeField, MinEpsilon]
-		private float m_Range;
-		private Vector3 m_Direction;
-		private bool m_IsAtDestination;
 		private Collider2D m_Collider;
 
 		protected override Gun[] Guns
@@ -36,42 +37,43 @@ namespace Parlor.Game
 		}
 		protected void FixedUpdate()
 		{
-			if (m_IsAtDestination)
+			m_Route.Update();
+			switch (m_Route.Status)
 			{
-				LookAtPlayer();
-				UpdateGuns();
-			}
-			else
-			{
-				MoveTowardsDestination();
+				case RouteStatus.MovingTowardsFirstDestination:
+					transform.position = m_Route.CurrentPosition;
+					break;
+				case RouteStatus.JustArrivedAtFirstDestination:
+					transform.position = m_Route.CurrentPosition;
+					m_Collider.enabled = true;
+					break;
+				case RouteStatus.Moving:
+					transform.position = m_Route.CurrentPosition;
+					AfterReachingFirstDestination();
+					if (m_DynamicSpin && m_Route.JustChangedDestination)
+					{
+						m_RotationSpeed  = -m_RotationSpeed;
+					}
+					break;
+				case RouteStatus.Finished:
+					AfterReachingFirstDestination();
+					break;
+				case RouteStatus.Invalid:
+				default:
+					return;
 			}
 		}
 		public override void Respawn()
 		{
 			base.Respawn();
-			m_IsAtDestination = false;
-			transform.position = Domain.GetBoundarySystem().GetSpawnPoint();
-			m_Direction = (Domain.GetBoundarySystem().Center - transform.position).normalized;
-			LookAtCenter();
+			if ((m_Flags & EnemyShipFlags.Boss) == 0)
+			{
+				m_Route = Domain.GetBoundarySystem().GetRoute();
+			}
+			m_Route.Restart();
+			m_Route.Speed = MoveSpeed;
+			transform.SetPositionAndRotation(m_Route.StartPosition, m_Route.StartRotation);
 			m_Collider.enabled = false;
-		}
-		private void MoveTowardsDestination()
-		{
-			if (Vector2.Distance(Domain.GetBoundarySystem().Center, transform.position) <= m_Range)
-			{
-				m_Collider.enabled = true;
-				m_IsAtDestination = true;
-			}
-			else
-			{
-				transform.position += MoveSpeed * Time.fixedDeltaTime * m_Direction;
-			}
-		}
-		private void LookAtCenter()
-		{
-			transform.rotation = Quaternion.LookRotation(
-				Vector3.forward,
-				Domain.GetBoundarySystem().Center - transform.position);
 		}
 		private void LookAtPlayer()
 		{
@@ -81,6 +83,28 @@ namespace Parlor.Game
 				transform.rotation,
 				Quaternion.Euler(0f, 0f, angle),
 				m_RotationSpeed * Time.fixedDeltaTime);
+		}
+		private void Spin()
+		{
+			foreach (var elem in m_Guns)
+			{
+				if (elem != null)
+				{
+					elem.transform.eulerAngles += Vector3.forward * m_RotationSpeed;
+				}
+			}
+		}
+		private void AfterReachingFirstDestination()
+		{
+			UpdateGuns();
+			if ((m_Flags & EnemyShipFlags.Boss) != 0)
+			{
+				Spin();
+			}
+			else
+			{
+				LookAtPlayer();
+			}
 		}
 	}
 	[Flags]

@@ -21,32 +21,8 @@ MonoBehaviour:
   - m_Action: 0
     m_WaitDuration: 0
     m_SpawnScheme: {fileID: 2683956262262205850, guid: e1f956e86b7af7149899669771f5698b, type: 3}
-    m_SpawnCount: 2
-  - m_Action: 1
-    m_WaitDuration: 0.6
-    m_SpawnScheme: {fileID: 0}
     m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0
-    m_SpawnScheme: {fileID: 2818952138774104111, guid: dc57a68ba82bc6c42b1b2fdc1d90d5e8, type: 3}
-    m_SpawnCount: 3
-  - m_Action: 0
-    m_WaitDuration: 0
-    m_SpawnScheme: {fileID: 2683956262262205850, guid: e1f956e86b7af7149899669771f5698b, type: 3}
-    m_SpawnCount: 3
-  - m_Action: 1
-    m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 2683956262262205850, guid: e1f956e86b7af7149899669771f5698b, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0
-    m_SpawnScheme: {fileID: 2818952138774104111, guid: dc57a68ba82bc6c42b1b2fdc1d90d5e8, type: 3}
-    m_SpawnCount: 4
   - m_Action: 2
     m_WaitDuration: 0
-    m_SpawnScheme: {fileID: 2818952138774104111, guid: dc57a68ba82bc6c42b1b2fdc1d90d5e8, type: 3}
-    m_SpawnCount: 2
-  - m_Action: 1
-    m_WaitDuration: 1.5
-    m_SpawnScheme: {fileID: 2818952138774104111, guid: dc57a68ba82bc6c42b1b2fdc1d90d5e8, type: 3}
-    m_SpawnCount: 2
+    m_SpawnScheme: {fileID: 0}
+    m_SpawnCount: 1
