@@ -60,6 +60,7 @@ namespace Parlor.Game.UI
 		protected void OnEnable()
 		{
 			ResetProperties();
+			Interactable = m_Interactable;
 		}
 		public void OnPointerEnter(PointerEventData eventData)
 		{

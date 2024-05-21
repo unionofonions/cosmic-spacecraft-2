@@ -72,6 +72,13 @@ namespace Parlor.Game.Localization
 			}
 			return ret;
 		}
+		static public void SetCurrentLanguageByIndex(int index)
+		{
+			if (Instance != null && (uint)index < (uint)Instance.m_LocaleMap.Count)
+			{
+				CurrentLanguage = (Language)index;
+			}
+		}
 		static private string MissingAsset()
 		{
 #if UNITY_EDITOR

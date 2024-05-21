@@ -20,9 +20,21 @@ MonoBehaviour:
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 0
-    m_SpawnScheme: {fileID: 2683956262262205850, guid: e1f956e86b7af7149899669771f5698b, type: 3}
+    m_SpawnScheme: {fileID: 4208105009928244467, guid: 21e58242799142544b9054946e509595, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 3717287206655150662, guid: 18707af4dc1453c418f67f79f4766fae, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 1296904603292853543, guid: b1bb84b5aaa01eb41a21eea7c5299782, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 5138868667975211815, guid: efc400ba6fbf0764b93b9806955551f6, type: 3}
     m_SpawnCount: 1
   - m_Action: 2
     m_WaitDuration: 0
-    m_SpawnScheme: {fileID: 0}
+    m_SpawnScheme: {fileID: 5138868667975211815, guid: efc400ba6fbf0764b93b9806955551f6, type: 3}
     m_SpawnCount: 1

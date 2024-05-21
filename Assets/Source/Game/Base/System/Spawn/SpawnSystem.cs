@@ -15,9 +15,11 @@ namespace Parlor.Game
 		[SerializeField, NotDefault]
 		private LevelInfo[] m_Levels;
 		private int m_ActiveEnemyCount;
+		private WaitUntil m_WaitForClear;
 
 		private void Awake()
 		{
+			m_WaitForClear = new WaitUntil(() => m_ActiveEnemyCount == 0);
 			Actor.OnDeath += (Actor instigator, Actor victim) =>
 			{
 				if (victim is EnemyShip)
@@ -84,7 +86,7 @@ namespace Parlor.Game
 				case WaveAction.WaitForTime:
 					return new WaitForSeconds(waveInfo.WaitDuration);
 				case WaveAction.WaitForClear:
-					return new WaitUntil(() => m_ActiveEnemyCount == 0);
+					return m_WaitForClear;
 				default:
 					return null;
 			}

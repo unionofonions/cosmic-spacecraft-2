@@ -3,11 +3,14 @@ namespace Parlor.Game
 {
 	using System;
 	using UnityEngine;
+	using UnityEngine.UI;
 	using TMPro;
 
 	[DisallowMultipleComponent]
 	public sealed class PlayerUpgradeComponent : MonoBehaviour
 	{
+		[SerializeField, NotDefault]
+		private Image m_Icon;
 		[SerializeField, NotDefault]
 		private TextMeshProUGUI[] m_Labels;
 		private PlayerUpgrade m_PlayerUpgrade;
@@ -18,6 +21,7 @@ namespace Parlor.Game
 			set
 			{
 				m_PlayerUpgrade = value;
+				UpdateIcon();
 				UpdateLabels();
 			}
 		}
@@ -31,6 +35,13 @@ namespace Parlor.Game
 				{
 					elem.Apply(player);
 				}
+			}
+		}
+		private void UpdateIcon()
+		{
+			if (m_PlayerUpgrade != null && m_Icon != null)
+			{
+				m_Icon.sprite = m_PlayerUpgrade.Icon;
 			}
 		}
 		private void UpdateLabels()

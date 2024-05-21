@@ -64,15 +64,19 @@ MonoBehaviour:
     m_VolumeScale: 0.3
   - m_Name: fx/loot
     m_Id: 4
-    m_Valid: 0
+    m_Valid: 1
     m_Bank:
-      m_Collection: []
-      m_Mode: 0
+      m_Collection:
+      - m_Value: {fileID: 8300000, guid: b7cf7206c2d1c524cabe9a27a6ece1b0, type: 3}
+        m_Weight: 0
+        m_Weighted: 0
+        m_Chance: 0
+      m_Mode: 1
       m_Threshold: 0
       m_TotalWeight: 0
-    m_VolumeScale: 0.6
-  - m_Name: music/01
-    m_Id: 5
+    m_VolumeScale: 0.25
+  - m_Name: music/main
+    m_Id: 10
     m_Valid: 1
     m_Bank:
       m_Collection:
@@ -81,11 +85,11 @@ MonoBehaviour:
         m_Weighted: 0
         m_Chance: 0
       m_Mode: 0
-      m_Threshold: 0
+      m_Threshold: 1
       m_TotalWeight: 0
     m_VolumeScale: 0.45
-  - m_Name: music/02
-    m_Id: 6
+  - m_Name: music/level
+    m_Id: 5
     m_Valid: 1
     m_Bank:
       m_Collection:
@@ -93,34 +97,33 @@ MonoBehaviour:
         m_Weight: 0
         m_Weighted: 0
         m_Chance: 0
-      m_Mode: 0
-      m_Threshold: 0
-      m_TotalWeight: 0
-    m_VolumeScale: 0.45
-  - m_Name: music/03
-    m_Id: 7
-    m_Valid: 1
-    m_Bank:
-      m_Collection:
       - m_Value: {fileID: 8300000, guid: 02833cc2adf5e1a44b989126d07d2dab, type: 3}
         m_Weight: 0
         m_Weighted: 0
         m_Chance: 0
-      m_Mode: 0
-      m_Threshold: 0
-      m_TotalWeight: 0
-    m_VolumeScale: 0.45
-  - m_Name: music/04
-    m_Id: 8
-    m_Valid: 1
-    m_Bank:
-      m_Collection:
       - m_Value: {fileID: 8300000, guid: 18dbc2a7a78b0a4439012cef3661a656, type: 3}
         m_Weight: 0
         m_Weighted: 0
         m_Chance: 0
-      m_Mode: 0
-      m_Threshold: 0
+      m_Mode: 1
+      m_Threshold: 1
       m_TotalWeight: 0
     m_VolumeScale: 0.45
-  m_NextId: 8
+  - m_Name: fx/explosion/01
+    m_Id: 9
+    m_Valid: 1
+    m_Bank:
+      m_Collection:
+      - m_Value: {fileID: 8300000, guid: aab20d2d36599d3459959dfcbc7879c9, type: 3}
+        m_Weight: 0
+        m_Weighted: 0
+        m_Chance: 0
+      - m_Value: {fileID: 8300000, guid: 05f96b037528d79489572d4bebb1df18, type: 3}
+        m_Weight: 0
+        m_Weighted: 0
+        m_Chance: 0
+      m_Mode: 0
+      m_Threshold: 1
+      m_TotalWeight: 0
+    m_VolumeScale: 0.5
+  m_NextId: 10

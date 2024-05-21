@@ -49,6 +49,7 @@ namespace Parlor.Game
 			}
 			else if (m_TransitionSpriteIndex < m_TransitionSprites.Length)
 			{
+				StopAllCoroutines();
 				var sprite = m_TransitionSprites[m_TransitionSpriteIndex];
 				TransitionSprite(sprite);
 			}

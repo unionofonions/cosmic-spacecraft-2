@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Bank:
     m_Collection:
     - m_Value:
-        m_Icon: {fileID: 0}
+        m_Icon: {fileID: 875065333, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
         - m_AffixType: 0
           m_Quality: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
       m_Weighted: 0
       m_Chance: 0
     - m_Value:
-        m_Icon: {fileID: 0}
+        m_Icon: {fileID: 1099988124, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
         - m_AffixType: 0
           m_Quality: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
       m_Weighted: 0
       m_Chance: 0
     - m_Value:
-        m_Icon: {fileID: 0}
+        m_Icon: {fileID: 676270843, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
         - m_AffixType: 3
           m_Quality: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
       m_Weighted: 0
       m_Chance: 0
     - m_Value:
-        m_Icon: {fileID: 0}
+        m_Icon: {fileID: 744846137, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
         - m_AffixType: 10
           m_Quality: 0

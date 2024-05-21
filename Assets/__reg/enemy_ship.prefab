@@ -283,8 +283,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -251486202, guid: 11a43ae035e625c438b4ef4fe81e6132, type: 3}
-  m_Color: {r: 0.990566, g: 0.2756764, b: 0.2756764, a: 1}
+  m_Sprite: {fileID: 1464139621, guid: de7c1ce883573084696dd26462393725, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -326,18 +326,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.021424323, y: 0.0035706758}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 0.8125}
+    oldSize: {x: 0.75, y: 0.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9375, y: 0.8125}
+  m_Size: {x: 0.535757, y: 0.5018227}
   m_EdgeRadius: 0
 --- !u!114 &2683956262262205850
 MonoBehaviour:
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11068d4c213688542805f07a251b9185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Damage: 25
+  m_Damage: 3
   m_DamageDeviation: 0.2
   m_CritChance: 0
   m_CritDamage: 1
@@ -368,10 +368,10 @@ MonoBehaviour:
   m_Score: 9
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 0
+    m_Id: 6
   m_DeathAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 2
+    m_Id: 11
   m_DeathTfx:
     m_Library: {fileID: 11400000, guid: 28f9df5129c67b94588c57c142ecf0b4, type: 2}
     m_Id: 1
@@ -379,16 +379,16 @@ MonoBehaviour:
     m_Duration: 3
   m_DeathSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
-    m_Id: 0
+    m_Id: 9
   m_ShieldVisual: {fileID: 0}
   m_BodyVisuals: []
-  m_FireInterval: 0.08
+  m_FireInterval: 0.4
   m_BulletSpeed: 4.25
   m_BulletScheme: {fileID: 1338055323789326434, guid: 891145566dbf6a647a7c306d42abc3f5, type: 3}
   m_FireSfx:
     m_Library: {fileID: 0}
     m_Id: 0
-  m_Flags: 0
+  m_Flags: 2
   m_RotationSpeed: 100
   m_DynamicSpin: 1
   m_Route:

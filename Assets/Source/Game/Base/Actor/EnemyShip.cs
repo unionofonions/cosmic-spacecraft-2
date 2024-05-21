@@ -11,7 +11,7 @@ namespace Parlor.Game
 		[Header("EnemyShip")]
 		[SerializeField]
 		private EnemyShipFlags m_Flags;
-		[SerializeField, HideInInspector]
+		[SerializeField]
 		private float m_RotationSpeed;
 		[SerializeField, HideInInspector]
 		private bool m_DynamicSpin;
