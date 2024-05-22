@@ -3,17 +3,17 @@ namespace Parlor.Game
 {
 	using System;
 	using UnityEngine;
-	using Parlor.Diagnostics;
 
-	[EditorHandled]
 	public class EnemyShip : Ship
 	{
 		[Header("EnemyShip")]
 		[SerializeField]
+		private EnemyShipType m_ShipType;
+		[SerializeField]
 		private EnemyShipFlags m_Flags;
 		[SerializeField]
 		private float m_RotationSpeed;
-		[SerializeField, HideInInspector]
+		[SerializeField]
 		private bool m_DynamicSpin;
 		[SerializeField]
 		private Route m_Route;
@@ -50,7 +50,7 @@ namespace Parlor.Game
 				case RouteStatus.Moving:
 					transform.position = m_Route.CurrentPosition;
 					AfterReachingFirstDestination();
-					if (m_DynamicSpin && m_Route.JustChangedDestination)
+					if (m_DynamicSpin && m_Route.JustChangedDestination && m_ShipType is EnemyShipType.Boss)
 					{
 						m_RotationSpeed  = -m_RotationSpeed;
 					}
@@ -66,7 +66,8 @@ namespace Parlor.Game
 		public override void Respawn()
 		{
 			base.Respawn();
-			if ((m_Flags & EnemyShipFlags.Boss) == 0)
+			Shield = Quantity.Full(Shield.Max);
+			if (m_ShipType is EnemyShipType.Normal)
 			{
 				m_Route = Domain.GetBoundarySystem().GetRoute();
 			}
@@ -97,7 +98,7 @@ namespace Parlor.Game
 		private void AfterReachingFirstDestination()
 		{
 			UpdateGuns();
-			if ((m_Flags & EnemyShipFlags.Boss) != 0)
+			if (m_ShipType is EnemyShipType.Boss)
 			{
 				Spin();
 			}
@@ -107,11 +108,16 @@ namespace Parlor.Game
 			}
 		}
 	}
+	public enum EnemyShipType
+	{
+		Normal,
+		Elite,
+		Boss
+	}
 	[Flags]
 	public enum EnemyShipFlags
 	{
 		None = 0x0,
-		Boss = 0x1,
-		PlayerUpgradeOnDeath = 0x2
+		PlayerUpgradeOnDeath = 0x1
 	}
 }

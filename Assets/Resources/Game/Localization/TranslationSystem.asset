@@ -16,6 +16,6 @@ MonoBehaviour:
   m_LocaleMap:
     m_Values:
     - {fileID: 11400000, guid: 49dd03d4e9249a64bb76eda7840e6adf, type: 2}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 11400000, guid: df75b2e7d8ae2ca4db521fa11c5e5e47, type: 2}
+    - {fileID: 11400000, guid: c6a97480992666a4c8a2dfc460bbb146, type: 2}
+    - {fileID: 11400000, guid: 84f5a71249ee66642945672fbf08c898, type: 2}
+    - {fileID: 11400000, guid: 4d78b8ad0a9c9704b94fd118f036ccca, type: 2}

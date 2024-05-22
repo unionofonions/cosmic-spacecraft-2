@@ -98,4 +98,41 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
-  m_NextId: 2
+  - m_Name: invisibility/bullet
+    m_Id: 3
+    m_Valid: 1
+    m_Value:
+      m_Function:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: -0.009254179
+          outSlope: -0.009254179
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.14777982
+        - serializedVersion: 3
+          time: 3.2648587
+          value: 0.75843453
+          inSlope: -0.23072706
+          outSlope: -0.23072706
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.08638858
+          outWeight: 0.0941931
+        - serializedVersion: 3
+          time: 6.6
+          value: 0
+          inSlope: -0.07173589
+          outSlope: -0.07173589
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.20495494
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 0
+  m_NextId: 3

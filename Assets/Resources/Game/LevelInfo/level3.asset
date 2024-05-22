@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7366ceb4cac682e48a232f46981c5653, type: 3}
+  m_Name: level3
+  m_EditorClassIdentifier: 
+  m_LevelName: 
+  m_Waves:
+  - m_Action: 1
+    m_WaitDuration: 2.5
+    m_SpawnScheme: {fileID: 0}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 4883390388830668981, guid: 6bff0ddecf436e4459e1bebea85969f6, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 3476077555038091249, guid: 0873257c443223d40b04eb6ef0257ef3, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 8219579980024173371, guid: 7713864b4ee9be34eb43f311a99ca9d5, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 769885768097878843, guid: 6f2549eccf9d36b4283ba88481b3cde7, type: 3}
+    m_SpawnCount: 2
+  - m_Action: 0
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 459364015967483461, guid: 77333151e94993b4d88cd4379f9885ca, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 2
+    m_WaitDuration: 0
+    m_SpawnScheme: {fileID: 5138868667975211815, guid: efc400ba6fbf0764b93b9806955551f6, type: 3}
+    m_SpawnCount: 1

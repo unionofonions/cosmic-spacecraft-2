@@ -10,72 +10,72 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd376d48e2c47cb4dbd79d9bd9f72add, type: 3}
-  m_Name: locale-en
+  m_Name: locale-de
   m_EditorClassIdentifier: 
   m_KeywordTextPairs:
   - Keyword: start
     Text: START
   - Keyword: settings
-    Text: SETTINGS
+    Text: EINSTELLUNGEN
   - Keyword: quit
-    Text: QUIT
+    Text: BEENDEN
   - Keyword: effect_volume
-    Text: EFFECT VOLUME
+    Text: EFFEKT-LAUTSTARKE
   - Keyword: music_volume
-    Text: MUSIC VOLUME
+    Text: MUSIK-LAUTSTARKE
   - Keyword: camera_shake
-    Text: CAMERA SHAKE
+    Text: KAMERASCHUTTELN
   - Keyword: language
-    Text: LANGUAGE
+    Text: SPRACHE
   - Keyword: game_paused
-    Text: GAME PAUSED
+    Text: SPIEL PAUSIERT
   - Keyword: resume
-    Text: RESUME
+    Text: FORTSETZEN
   - Keyword: restart
-    Text: RESTART
+    Text: NEUSTART
   - Keyword: main_menu
-    Text: MAIN MENU
+    Text: HAUPTMENU
   - Keyword: select_upgrade
-    Text: SELECT AN UPGRADE
+    Text: WAHLE EINE AUFSTUFUNG
   - Keyword: game_over
-    Text: GAME OVER
+    Text: SPIEL VORBEI
   - Keyword: score
-    Text: SCORE
+    Text: PUNKTZAHL
   - Keyword: new_record
-    Text: NEW RECORD
+    Text: NEUER REKORD
   - Keyword: highest_score
-    Text: HIGHEST SCORE
+    Text: HOCHSTE PUNKTZAHL
   - Keyword: move
-    Text: MOVE
+    Text: BEWEGEN
   - Keyword: shoot
-    Text: SHOOT
+    Text: SCHIESSEN
   - Keyword: spawn_started
-    Text: GET READY!
+    Text: MACH DICH BEREIT!
   - Keyword: level_started
-    Text: NOW ENTERING
+    Text: JETZT BETRETEN
   - Keyword: increased
-    Text: INCREASED
+    Text: ERHOHT
   - Keyword: decreased
-    Text: DECREASED
+    Text: VERRINGERT
   - Keyword: damage
-    Text: DAMAGE
+    Text: SCHADEN
   - Keyword: crit_chance
-    Text: CRIT CHANCE
+    Text: KRIT-CHANCE
   - Keyword: crit_damage
-    Text: CRIT DAMAGE
+    Text: KRIT-SCHADEN
   - Keyword: armor_pen
-    Text: ARMOR PEN
+    Text: PANZERUNGSDURCHDRINGUNG
   - Keyword: max_health
-    Text: MAX HEALTH
+    Text: MAXIMALE GESUNDHEIT
   - Keyword: armor
-    Text: ARMOR
+    Text: PANZERUNG
   - Keyword: max_shield
-    Text: MAX SHIELD
+    Text: MAXIMALER SCHILD
   - Keyword: move_speed
-    Text: MOVE SPEED
+    Text: BEWEGUNGSGESCHWINDIGKEIT
   - Keyword: fire_rate
-    Text: FIRE RATE
+    Text: FEUERRATE
   - Keyword: bullet_speed
-    Text: BULLET SPEED
+    Text: GESCHOSS-GESCHWINDIGKEIT
   - Keyword: gun_count
-    Text: GUN COUNT
+    Text: ANZAHL DER WAFFEN

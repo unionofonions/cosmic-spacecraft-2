@@ -8,6 +8,11 @@ namespace Parlor.Game
 	[CreateAssetMenu(fileName = "AffixMetadata", menuName = "Parlor/Game/AffixMetadata")]
 	public sealed class AffixMetadata : ScriptableObject
 	{
+		private const string c_MinorPositiveQualityPostfix = "+";
+		private const string c_MajorPositiveQualityPostfix = "++";
+		private const string c_MinorNegativeQualityPostfix = "-";
+		private const string c_MajorNegativeQualityPostfix = "--";
+
 		static private AffixMetadata s_Instance;
 
 		[SerializeField]
@@ -47,9 +52,11 @@ namespace Parlor.Game
 				return String.Empty;
 			}
 			var keyword = info.DescriptionKeywordMap[(int)quality];
-			//var text = TranslationSystem.KeywordToText(keyword);
-			var text = keyword;
 			var isNegative = IsNegative(affix);
+			var attribute = TranslationSystem.KeywordToText(keyword);
+			var prefixKeyword = isNegative ? "decreased" : "increased";
+			var prefixText = TranslationSystem.KeywordToText(prefixKeyword);
+			var text = $"{prefixText} {attribute} {GetQualityPostfix(quality)}";
 			var color = isNegative ? Instance.m_NegativeColor : Instance.m_PositiveColor;
 			return StringHelper.Colorize(text, color, close: false);
 		}
@@ -75,6 +82,17 @@ namespace Parlor.Game
 		static private bool IsNegative(Affix affix)
 		{
 			return affix.Quality is AffixQuality.MinorNegative or AffixQuality.MajorNegative;
+		}
+		static private string GetQualityPostfix(AffixQuality quality)
+		{
+			return quality switch
+			{
+				AffixQuality.MinorPositive => c_MinorPositiveQualityPostfix,
+				AffixQuality.MajorPositive => c_MajorPositiveQualityPostfix,
+				AffixQuality.MinorNegative => c_MinorNegativeQualityPostfix,
+				AffixQuality.MajorNegative => c_MajorNegativeQualityPostfix,
+				_ => String.Empty,
+			};
 		}
 
 		[Serializable]

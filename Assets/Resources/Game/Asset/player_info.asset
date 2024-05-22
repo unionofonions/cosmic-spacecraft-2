@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ac53e367b304045956a9e00cbc3a4f, type: 3}
   m_Name: player_info
   m_EditorClassIdentifier: 
-  m_Damage: 40
+  m_Damage: 10
   m_DamageDeviation: 0.15
-  m_CritChance: 0.2
+  m_CritChance: 0.1
   m_CritDamage: 1.3
   m_ArmorPenetration: 0
   m_Health: 100
@@ -23,8 +23,8 @@ MonoBehaviour:
     m_Current: 0
     m_Max: 100
   m_MoveSpeed: 5
-  m_FireInterval: 0.25
-  m_BulletSpeed: 10
+  m_FireInterval: 0.3
+  m_BulletSpeed: 9
   m_BulletScheme: {fileID: 7083480316294423662, guid: 39542c33f37d5c148b5a761b1e58c328, type: 3}
   m_GunCount: 1
   m_Position: {x: 0, y: -1.85, z: 0}

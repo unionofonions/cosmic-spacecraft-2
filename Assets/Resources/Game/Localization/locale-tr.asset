@@ -13,7 +13,69 @@ MonoBehaviour:
   m_Name: locale-tr
   m_EditorClassIdentifier: 
   m_KeywordTextPairs:
+  - Keyword: start
+    Text: BASLA
+  - Keyword: settings
+    Text: AYARLAR
+  - Keyword: quit
+    Text: CIKIS
+  - Keyword: effect_volume
+    Text: EFEKT SESI
+  - Keyword: music_volume
+    Text: MUZIK SESI
+  - Keyword: camera_shake
+    Text: KAMERA SARSINTISI
+  - Keyword: language
+    Text: DIL
+  - Keyword: game_paused
+    Text: OYUN DURDURULDU
+  - Keyword: resume
+    Text: DEVAM ET
+  - Keyword: restart
+    Text: YENIDEN BASLAT
+  - Keyword: main_menu
+    Text: ANA MENU
+  - Keyword: select_upgrade
+    Text: BIR YUKSELTME SEC
+  - Keyword: game_over
+    Text: OYUN BITTI
+  - Keyword: score
+    Text: SKOR
+  - Keyword: new_record
+    Text: YENI REKOR
+  - Keyword: highest_score
+    Text: EN YUKSEK SKOR
+  - Keyword: move
+    Text: HAREKET
+  - Keyword: shoot
+    Text: ATES
+  - Keyword: spawn_started
+    Text: HAZIRLAN!
   - Keyword: level_started
     Text: GIRIS YAPILIYOR
-  - Keyword: new_record
-    Text: YENI REKOR!
+  - Keyword: increased
+    Text: ARTTIRILMIS
+  - Keyword: decreased
+    Text: AZALTILMIS
+  - Keyword: damage
+    Text: HASAR
+  - Keyword: crit_chance
+    Text: KRITIK SANSI
+  - Keyword: crit_damage
+    Text: KRITIK HASARI
+  - Keyword: armor_pen
+    Text: ZIRH DELME
+  - Keyword: max_health
+    Text: SAGLIK
+  - Keyword: armor
+    Text: ZIRH
+  - Keyword: max_shield
+    Text: KALKAN
+  - Keyword: move_speed
+    Text: HAREKET HIZI
+  - Keyword: fire_rate
+    Text: ATES HIZI
+  - Keyword: bullet_speed
+    Text: MERMI HIZI
+  - Keyword: gun_count
+    Text: SILAH SAYISI

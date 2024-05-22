@@ -97,7 +97,7 @@ namespace Parlor.Game
 	[Flags]
 	public enum AsteroidFlags
 	{
-		None,
-		Splitting
+		None = 0x0,
+		Splitting = 0x1
 	}
 }

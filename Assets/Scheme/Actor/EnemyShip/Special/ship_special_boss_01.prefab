@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2268638725526465470}
   - component: {fileID: 6936245300438049912}
   m_Layer: 6
-  m_Name: ship_bos_01
+  m_Name: ship_special_boss_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,11 +182,11 @@ MonoBehaviour:
   - {fileID: 855740322, guid: 11a43ae035e625c438b4ef4fe81e6132, type: 3}
   m_FireInterval: 0.1
   m_BulletSpeed: 7.4
-  m_BulletScheme: {fileID: 2928911405120239331, guid: 56722e7cd73d2a24398c2b9ffdf61d32, type: 3}
+  m_BulletScheme: {fileID: 5955453443571106428, guid: cf8ff7f78b160c94a95f52cc583063c7, type: 3}
   m_FireSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
     m_Id: 0
-  m_Flags: 0
+  m_Flags: -1
   m_RotationSpeed: 300
   m_DynamicSpin: 1
   m_Route:

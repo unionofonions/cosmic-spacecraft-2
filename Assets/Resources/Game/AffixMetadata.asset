@@ -18,10 +18,10 @@ MonoBehaviour:
     m_Values:
     - DescriptionKeywordMap:
         m_Values:
-        - INCREASED DAMAGE+
-        - INCREASED DAMAGE++
-        - DECREASED DAMAGE-
-        - DECREASED DAMAGE--
+        - damage
+        - damage
+        - damage
+        - damage
       FortifyAmountMap:
         m_Values:
         - 5
@@ -30,10 +30,10 @@ MonoBehaviour:
         - -10
     - DescriptionKeywordMap:
         m_Values:
-        - SLIGHTLY INCREASES CRIT CHANCE
-        - SIGNIFICANTLY INCREASES CRIT CHANCE
-        - SLIGHTLY DECREASES CRIT CHANCE
-        - SIGNIFICANTLY DECREASES CRIT CHANCE
+        - crit_chance
+        - crit_chance
+        - crit_chance
+        - crit_chance
       FortifyAmountMap:
         m_Values:
         - 0
@@ -54,10 +54,10 @@ MonoBehaviour:
         - 0
     - DescriptionKeywordMap:
         m_Values:
-        - INCREASED ARMOR PENETRATION +
-        - INCREASED ARMOR PENETRATION ++
-        - DECREASED ARMOR PENETRATION -
-        - DECREASED ARMOR PENETRATION --
+        - armor_pen
+        - armor_pen
+        - armor_pen
+        - armor_pen
       FortifyAmountMap:
         m_Values:
         - 7
@@ -66,10 +66,10 @@ MonoBehaviour:
         - -7
     - DescriptionKeywordMap:
         m_Values:
-        - INCREASED HEALTH +
-        - INCREASED HEALTH ++
-        - DECREASED HEALTH -
-        - DECREASED HEALTH --
+        - max_health
+        - max_health
+        - max_health
+        - max_health
       FortifyAmountMap:
         m_Values:
         - 10
@@ -77,31 +77,71 @@ MonoBehaviour:
         - -7
         - -10
     - DescriptionKeywordMap:
-        m_Values: []
+        m_Values:
+        - armor
+        - armor
+        - armor
+        - armor
       FortifyAmountMap:
-        m_Values: []
-    - DescriptionKeywordMap:
-        m_Values: []
-      FortifyAmountMap:
-        m_Values: []
-    - DescriptionKeywordMap:
-        m_Values: []
-      FortifyAmountMap:
-        m_Values: []
-    - DescriptionKeywordMap:
-        m_Values: []
-      FortifyAmountMap:
-        m_Values: []
-    - DescriptionKeywordMap:
-        m_Values: []
-      FortifyAmountMap:
-        m_Values: []
+        m_Values:
+        - 0
+        - 0
+        - 0
+        - 0
     - DescriptionKeywordMap:
         m_Values:
-        - INCREASED GUN COUNT
-        - INCREASED GUN COUNT
-        - DECREASED GUN COUNT
-        - DECREASED GUN COUNT
+        - max_shield
+        - max_shield
+        - max_shield
+        - max_shield
+      FortifyAmountMap:
+        m_Values:
+        - 0
+        - 0
+        - 0
+        - 0
+    - DescriptionKeywordMap:
+        m_Values:
+        - move_speed
+        - move_speed
+        - move_speed
+        - move_speed
+      FortifyAmountMap:
+        m_Values:
+        - 0
+        - 0
+        - 0
+        - 0
+    - DescriptionKeywordMap:
+        m_Values:
+        - fire_rate
+        - fire_rate
+        - fire_rate
+        - fire_rate
+      FortifyAmountMap:
+        m_Values:
+        - 0
+        - 0
+        - 0
+        - 0
+    - DescriptionKeywordMap:
+        m_Values:
+        - bullet_speed
+        - bullet_speed
+        - bullet_speed
+        - bullet_speed
+      FortifyAmountMap:
+        m_Values:
+        - 0
+        - 0
+        - 0
+        - 0
+    - DescriptionKeywordMap:
+        m_Values:
+        - gun_count
+        - gun_count
+        - gun_count
+        - gun_count
       FortifyAmountMap:
         m_Values:
         - 1
