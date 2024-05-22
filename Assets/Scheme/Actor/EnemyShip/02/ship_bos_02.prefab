@@ -186,9 +186,12 @@ MonoBehaviour:
   m_RotationSpeed: 300
   m_DynamicSpin: 1
   m_Route:
-    m_StartPosition: {x: 0, y: 0, z: 0}
-    m_Destinations: []
-    m_Loop: 0
+    m_StartPosition: {x: 0, y: 7, z: 0}
+    m_Destinations:
+    - {x: 0, y: 0, z: 0}
+    - {x: -3, y: 0, z: 0}
+    - {x: 3, y: 0, z: 0}
+    m_Loop: 1
   m_Guns:
   - {fileID: 3128238784580072382}
 --- !u!1 &6792461593017178571

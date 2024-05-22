@@ -202,9 +202,9 @@ MonoBehaviour:
   m_Shield:
     m_Current: 0
     m_Max: 0
-  m_MoveSpeed: 2
+  m_MoveSpeed: 3.2
   m_Faction: 0
-  m_Score: 9
+  m_Score: 10
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 6
@@ -221,15 +221,16 @@ MonoBehaviour:
     m_Id: 9
   m_ShieldVisual: {fileID: 0}
   m_BodyVisuals: []
-  m_FireInterval: 1
-  m_BulletSpeed: 4.25
+  m_FireInterval: 0.9
+  m_BulletSpeed: 4
   m_BulletScheme: {fileID: 3675620483231020449, guid: 1351620e96be4d54c8c257b32a83d9c0, type: 3}
   m_FireSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
     m_Id: 0
+  m_ShipType: 0
   m_Flags: 0
-  m_RotationSpeed: 100
-  m_DynamicSpin: 1
+  m_RotationSpeed: 120
+  m_DynamicSpin: 0
   m_Route:
     m_StartPosition: {x: 0, y: 0, z: 0}
     m_Destinations: []

@@ -10,16 +10,19 @@ namespace Parlor.Game.Editor
 	{
 		protected override void Update(Rect rect, SerializedProperty property, GUIContent label)
 		{
+			var actionProp = property.PropertyOrThrow("m_Action");
+			var color = GUI.color;
+			GUI.backgroundColor = GetBackgroundColor(actionProp);
 			rect.StretchHeight();
 			property.isExpanded = EditorGUI.Foldout(
 				rect,
 				property.isExpanded,
 				GetLabel(property),
 				toggleOnLabelClick: true);
+			GUI.backgroundColor = color;
 			if (property.isExpanded)
 			{
 				++EditorGUI.indentLevel;
-				var actionProp = property.PropertyOrThrow("m_Action");
 				rect.NewLine();
 				EditorGUI.PropertyField(rect, actionProp);
 				switch ((WaveAction)actionProp.enumValueIndex)
@@ -64,6 +67,16 @@ namespace Parlor.Game.Editor
 				}
 			}
 			return ret;
+		}
+		private Color GetBackgroundColor(SerializedProperty actionProp)
+		{
+			return (WaveAction)actionProp.enumValueIndex switch
+			{
+				WaveAction.Spawn => Color.red,
+				WaveAction.WaitForTime => Color.green,
+				WaveAction.WaitForClear => Color.blue,
+				_ => Color.white,
+			};
 		}
 		private GUIContent GetLabel(SerializedProperty property)
 		{

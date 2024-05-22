@@ -355,6 +355,6 @@ MonoBehaviour:
     m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 5
+    m_WaitDuration: 3
     m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
     m_SpawnCount: 1

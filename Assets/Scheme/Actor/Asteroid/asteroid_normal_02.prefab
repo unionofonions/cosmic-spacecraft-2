@@ -171,21 +171,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17a16532303aa0409631f0fcf6b1f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Damage: 12
-  m_DamageDeviation: 0.15
+  m_Damage: 18
+  m_DamageDeviation: 0.1
   m_CritChance: 0
   m_CritDamage: 1
   m_ArmorPenetration: 0
   m_Health:
-    m_Current: 20
-    m_Max: 20
+    m_Current: 25
+    m_Max: 25
   m_Armor: 15
   m_Shield:
     m_Current: 0
     m_Max: 0
-  m_MoveSpeed: 4
+  m_MoveSpeed: 4.5
   m_Faction: 0
-  m_Score: 8
+  m_Score: 11
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_BodyVisuals: []
   m_AsteroidFlags: 0
   m_SpawnArc:
-    Start: 20
-    End: 160
+    Start: 0
+    End: 180
   m_SplitAsteroid: {fileID: 0}
   m_SplitCount: 1

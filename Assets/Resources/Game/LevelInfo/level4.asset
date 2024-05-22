@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7366ceb4cac682e48a232f46981c5653, type: 3}
-  m_Name: level2
+  m_Name: level4
   m_EditorClassIdentifier: 
   m_LevelName: 
   m_Waves:
@@ -20,40 +20,48 @@ MonoBehaviour:
     m_SpawnCount: 3
   - m_Action: 0
     m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 4208105009928244467, guid: 21e58242799142544b9054946e509595, type: 3}
-    m_SpawnCount: 3
+    m_SpawnScheme: {fileID: 3580545574739566119, guid: 0f4958fd32ce9694d870e996bd7a5688, type: 3}
+    m_SpawnCount: 2
+  - m_Action: 0
+    m_WaitDuration: 3
+    m_SpawnScheme: {fileID: 1174156455988790524, guid: 6cd658a27bfe81b40a6eaee691e689ef, type: 3}
+    m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 250037024998222138, guid: d6a4cd207fc93f34a9c1b0bbb75854fd, type: 3}
-    m_SpawnCount: 1
+    m_SpawnScheme: {fileID: 9127274503109773714, guid: 16ebc5bfd7e37a04082236eb8d0a76d5, type: 3}
+    m_SpawnCount: 2
   - m_Action: 1
-    m_WaitDuration: 1.6
-    m_SpawnScheme: {fileID: 250037024998222138, guid: d6a4cd207fc93f34a9c1b0bbb75854fd, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 1
-    m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
     m_WaitDuration: 2
+    m_SpawnScheme: {fileID: 250037024998222138, guid: d6a4cd207fc93f34a9c1b0bbb75854fd, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 4
     m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
+    m_SpawnCount: 2
+  - m_Action: 1
+    m_WaitDuration: 3
+    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 2
+    m_SpawnScheme: {fileID: 6977637768978685619, guid: b15503d0426c7db48ab12bc60441e06d, type: 3}
     m_SpawnCount: 3
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 1
-    m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 8652972743760517091, guid: 7c9c141f3f759e94db0eec5ab42d3510, type: 3}
+    m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
+    m_SpawnCount: 3
+  - m_Action: 2
+    m_WaitDuration: 3
+    m_SpawnScheme: {fileID: 8948410669938684096, guid: f6e3266a11ff8ac448dd588ddcd4efc2, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 1296904603292853543, guid: b1bb84b5aaa01eb41a21eea7c5299782, type: 3}
-    m_SpawnCount: 1
+    m_SpawnScheme: {fileID: 1174156455988790524, guid: 6cd658a27bfe81b40a6eaee691e689ef, type: 3}
+    m_SpawnCount: 3
+  - m_Action: 0
+    m_WaitDuration: 3
+    m_SpawnScheme: {fileID: 3580545574739566119, guid: 0f4958fd32ce9694d870e996bd7a5688, type: 3}
+    m_SpawnCount: 3
   - m_Action: 1
     m_WaitDuration: 1
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
@@ -61,47 +69,47 @@ MonoBehaviour:
   - m_Action: 0
     m_WaitDuration: 2
     m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
-    m_SpawnCount: 1
+    m_SpawnCount: 2
   - m_Action: 1
-    m_WaitDuration: 1
+    m_WaitDuration: 0.7
     m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
-    m_SpawnCount: 2
+    m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
+    m_SpawnCount: 4
   - m_Action: 1
-    m_WaitDuration: 0.8
+    m_WaitDuration: 1
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
     m_SpawnCount: 2
   - m_Action: 0
     m_WaitDuration: 1.4
+    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
+    m_SpawnCount: 2
+  - m_Action: 0
+    m_WaitDuration: 4
     m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
-    m_SpawnCount: 3
-  - m_Action: 0
-    m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 1.4
+    m_WaitDuration: 1
     m_SpawnScheme: {fileID: 8948410669938684096, guid: f6e3266a11ff8ac448dd588ddcd4efc2, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 4
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
-    m_SpawnCount: 1
+    m_SpawnCount: 2
   - m_Action: 2
     m_WaitDuration: 4
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
     m_SpawnCount: 2
   - m_Action: 0
     m_WaitDuration: 4
+    m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
+    m_SpawnCount: 3
+  - m_Action: 0
+    m_WaitDuration: 4
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
     m_SpawnCount: 2
-  - m_Action: 0
-    m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
-    m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 2
     m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
@@ -116,19 +124,19 @@ MonoBehaviour:
     m_SpawnCount: 3
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 4208105009928244467, guid: 21e58242799142544b9054946e509595, type: 3}
-    m_SpawnCount: 1
+    m_SpawnScheme: {fileID: 1357877180149779720, guid: 78540557175c7a649b5bd9a6e18650dc, type: 3}
+    m_SpawnCount: 2
   - m_Action: 0
     m_WaitDuration: 3
-    m_SpawnScheme: {fileID: 3717287206655150662, guid: 18707af4dc1453c418f67f79f4766fae, type: 3}
+    m_SpawnScheme: {fileID: 9127274503109773714, guid: 16ebc5bfd7e37a04082236eb8d0a76d5, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 4
+    m_WaitDuration: 2
     m_SpawnScheme: {fileID: 3717287206655150662, guid: 18707af4dc1453c418f67f79f4766fae, type: 3}
     m_SpawnCount: 3
   - m_Action: 0
     m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 1296904603292853543, guid: b1bb84b5aaa01eb41a21eea7c5299782, type: 3}
+    m_SpawnScheme: {fileID: 1174156455988790524, guid: 6cd658a27bfe81b40a6eaee691e689ef, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 1
@@ -136,26 +144,22 @@ MonoBehaviour:
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
+    m_SpawnScheme: {fileID: 4883431493164671015, guid: d50fbaa99975d61429bab3f497aeec2f, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 1
-    m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 3
-    m_SpawnScheme: {fileID: 5138868667975211815, guid: efc400ba6fbf0764b93b9806955551f6, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 3
-    m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
+    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
     m_SpawnCount: 2
   - m_Action: 1
     m_WaitDuration: 1
+    m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 3
+    m_SpawnScheme: {fileID: 1357877180149779720, guid: 78540557175c7a649b5bd9a6e18650dc, type: 3}
+    m_SpawnCount: 2
+  - m_Action: 0
+    m_WaitDuration: 3
     m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
     m_SpawnCount: 2
   - m_Action: 0
@@ -163,7 +167,7 @@ MonoBehaviour:
     m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 1.5
+    m_WaitDuration: 0.5
     m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
@@ -175,12 +179,12 @@ MonoBehaviour:
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
     m_SpawnCount: 2
   - m_Action: 1
-    m_WaitDuration: 2
+    m_WaitDuration: 1
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
     m_SpawnCount: 2
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 4208105009928244467, guid: 21e58242799142544b9054946e509595, type: 3}
+    m_SpawnScheme: {fileID: 9127274503109773714, guid: 16ebc5bfd7e37a04082236eb8d0a76d5, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 1
@@ -188,15 +192,15 @@ MonoBehaviour:
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
-    m_SpawnCount: 4
+    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
+    m_SpawnCount: 3
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 1296904603292853543, guid: b1bb84b5aaa01eb41a21eea7c5299782, type: 3}
+    m_SpawnScheme: {fileID: 1174156455988790524, guid: 6cd658a27bfe81b40a6eaee691e689ef, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 250037024998222138, guid: d6a4cd207fc93f34a9c1b0bbb75854fd, type: 3}
+    m_SpawnScheme: {fileID: 3580545574739566119, guid: 0f4958fd32ce9694d870e996bd7a5688, type: 3}
     m_SpawnCount: 2
   - m_Action: 1
     m_WaitDuration: 2
@@ -204,7 +208,7 @@ MonoBehaviour:
     m_SpawnCount: 2
   - m_Action: 0
     m_WaitDuration: 3
-    m_SpawnScheme: {fileID: 6977637768978685619, guid: b15503d0426c7db48ab12bc60441e06d, type: 3}
+    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
     m_SpawnCount: 2
   - m_Action: 1
     m_WaitDuration: 1
@@ -213,10 +217,10 @@ MonoBehaviour:
   - m_Action: 0
     m_WaitDuration: 1
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
-    m_SpawnCount: 2
+    m_SpawnCount: 3
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 4882552970100264135, guid: 1f7305568034e06469ad6d28040820b9, type: 3}
+    m_SpawnScheme: {fileID: 3816916382062705360, guid: c30a07f94d2d68943b8e7559754bfa49, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 1.7
@@ -225,35 +229,35 @@ MonoBehaviour:
   - m_Action: 0
     m_WaitDuration: 3
     m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
-    m_SpawnCount: 1
+    m_SpawnCount: 2
   - m_Action: 1
-    m_WaitDuration: 0.5
+    m_WaitDuration: 0.6
     m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
-    m_SpawnCount: 2
+    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
+    m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 2
     m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
     m_SpawnCount: 2
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
+    m_SpawnScheme: {fileID: 6977637768978685619, guid: b15503d0426c7db48ab12bc60441e06d, type: 3}
     m_SpawnCount: 1
   - m_Action: 2
     m_WaitDuration: 2
     m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 2
+    m_WaitDuration: 1
     m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 5
-    m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
-    m_SpawnCount: 3
+    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
+    m_SpawnCount: 2
   - m_Action: 1
     m_WaitDuration: 1
     m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
@@ -261,22 +265,22 @@ MonoBehaviour:
   - m_Action: 0
     m_WaitDuration: 1
     m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
+    m_SpawnCount: 2
+  - m_Action: 0
+    m_WaitDuration: 1
+    m_SpawnScheme: {fileID: 1174156455988790524, guid: 6cd658a27bfe81b40a6eaee691e689ef, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 3717287206655150662, guid: 18707af4dc1453c418f67f79f4766fae, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 250037024998222138, guid: d6a4cd207fc93f34a9c1b0bbb75854fd, type: 3}
-    m_SpawnCount: 1
+    m_SpawnScheme: {fileID: 3580545574739566119, guid: 0f4958fd32ce9694d870e996bd7a5688, type: 3}
+    m_SpawnCount: 2
   - m_Action: 1
     m_WaitDuration: 2
     m_SpawnScheme: {fileID: 4883431493164671015, guid: d50fbaa99975d61429bab3f497aeec2f, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 2
-    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
+    m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 1
@@ -284,11 +288,11 @@ MonoBehaviour:
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 250037024998222138, guid: d6a4cd207fc93f34a9c1b0bbb75854fd, type: 3}
+    m_SpawnScheme: {fileID: 4883431493164671015, guid: d50fbaa99975d61429bab3f497aeec2f, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 3717287206655150662, guid: 18707af4dc1453c418f67f79f4766fae, type: 3}
+    m_SpawnScheme: {fileID: 1357877180149779720, guid: 78540557175c7a649b5bd9a6e18650dc, type: 3}
     m_SpawnCount: 2
   - m_Action: 1
     m_WaitDuration: 1
@@ -296,55 +300,35 @@ MonoBehaviour:
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 1
-    m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 1
-    m_WaitDuration: 0.5
-    m_SpawnScheme: {fileID: 5300767643444252229, guid: 945407c3231dd364e948dacc82c563f4, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0.5
     m_SpawnScheme: {fileID: 7350658792598264578, guid: 41d60195d88002c4b8c7a26ec92b03a5, type: 3}
-    m_SpawnCount: 2
+    m_SpawnCount: 3
+  - m_Action: 1
+    m_WaitDuration: 0.5
+    m_SpawnScheme: {fileID: 5300767643444252229, guid: 945407c3231dd364e948dacc82c563f4, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 0
+    m_WaitDuration: 0.5
+    m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
+    m_SpawnCount: 1
   - m_Action: 1
     m_WaitDuration: 1
     m_SpawnScheme: {fileID: 8948410669938684096, guid: f6e3266a11ff8ac448dd588ddcd4efc2, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 0.5
-    m_SpawnScheme: {fileID: 1605025596252935658, guid: 4507d78d1001cf84e97c4baa06f91f27, type: 3}
-    m_SpawnCount: 2
-  - m_Action: 1
-    m_WaitDuration: 0.5
-    m_SpawnScheme: {fileID: 5300767643444252229, guid: 945407c3231dd364e948dacc82c563f4, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0.5
     m_SpawnScheme: {fileID: 6977637768978685619, guid: b15503d0426c7db48ab12bc60441e06d, type: 3}
     m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0.5
-    m_SpawnScheme: {fileID: 1265861138368054345, guid: a096c4cd31f2dde4ca5dfbe8ed646a27, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0.5
-    m_SpawnScheme: {fileID: 5411457191835289458, guid: bd1257d4dcdd7e340b7139dbe9f4cc2a, type: 3}
-    m_SpawnCount: 1
-  - m_Action: 0
-    m_WaitDuration: 0.5
-    m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
-    m_SpawnCount: 2
   - m_Action: 2
     m_WaitDuration: 0.5
     m_SpawnScheme: {fileID: 5300767643444252229, guid: 945407c3231dd364e948dacc82c563f4, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 2
+    m_WaitDuration: 1.4
     m_SpawnScheme: {fileID: 5300767643444252229, guid: 945407c3231dd364e948dacc82c563f4, type: 3}
     m_SpawnCount: 1
   - m_Action: 0
     m_WaitDuration: 4
-    m_SpawnScheme: {fileID: 5292451628453631399, guid: 42a074f471a86034eb0677cda3089004, type: 3}
+    m_SpawnScheme: {fileID: 8948410669938684096, guid: f6e3266a11ff8ac448dd588ddcd4efc2, type: 3}
     m_SpawnCount: 1
   - m_Action: 2
     m_WaitDuration: 4

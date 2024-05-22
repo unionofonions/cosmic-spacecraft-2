@@ -172,20 +172,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damage: 30
-  m_DamageDeviation: 0.15
+  m_DamageDeviation: 0.1
   m_CritChance: 0
   m_CritDamage: 1
-  m_ArmorPenetration: 0
+  m_ArmorPenetration: 5
   m_Health:
-    m_Current: 100
-    m_Max: 100
-  m_Armor: 0
+    m_Current: 30
+    m_Max: 30
+  m_Armor: 10
   m_Shield:
     m_Current: 0
     m_Max: 0
   m_MoveSpeed: 4
   m_Faction: 0
-  m_Score: 8
+  m_Score: 13
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 0
