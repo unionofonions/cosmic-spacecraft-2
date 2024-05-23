@@ -146,15 +146,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11068d4c213688542805f07a251b9185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Damage: 6
+  m_Damage: 10
   m_DamageDeviation: 0.2
   m_CritChance: 0
   m_CritDamage: 1
   m_ArmorPenetration: 0
   m_Health:
-    m_Current: 50
-    m_Max: 50
-  m_Armor: 0
+    m_Current: 21
+    m_Max: 21
+  m_Armor: 10
   m_Shield:
     m_Current: 0
     m_Max: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Score: 10
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 6
+    m_Id: 9
   m_DeathAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 11
@@ -205,9 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485dea86233daa4fada2e5cbe6e3d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Amount: 6
+  m_Amount: 5
   m_Radius: 8
-  m_ProcInterval: 0.8
+  m_ProcInterval: 0.65
   m_TargetLayer:
     serializedVersion: 2
     m_Bits: 64

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_LevelName: 
   m_Waves:
   - m_Action: 1
-    m_WaitDuration: 2.5
+    m_WaitDuration: 2
     m_SpawnScheme: {fileID: 1608090805783777993, guid: 4eb7e63c6a75f9845bac0ca7d88b3f43, type: 3}
     m_SpawnCount: 3
   - m_Action: 0
@@ -335,6 +335,6 @@ MonoBehaviour:
     m_SpawnScheme: {fileID: 8948410669938684096, guid: f6e3266a11ff8ac448dd588ddcd4efc2, type: 3}
     m_SpawnCount: 1
   - m_Action: 1
-    m_WaitDuration: 3
+    m_WaitDuration: 2
     m_SpawnScheme: {fileID: 8948410669938684096, guid: f6e3266a11ff8ac448dd588ddcd4efc2, type: 3}
     m_SpawnCount: 1

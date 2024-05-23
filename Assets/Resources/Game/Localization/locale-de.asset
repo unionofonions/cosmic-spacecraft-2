@@ -79,3 +79,11 @@ MonoBehaviour:
     Text: GESCHOSS-GESCHWINDIGKEIT
   - Keyword: gun_count
     Text: ANZAHL DER WAFFEN
+  - Keyword: level_2
+    Text: ASTEROIDENGURTEL
+  - Keyword: level_3
+    Text: ANDROMEDA-WIRBEL
+  - Keyword: level_4
+    Text: ZENIT-LEERE
+  - Keyword: level_5
+    Text: SCHIFFSFRIEDHOF

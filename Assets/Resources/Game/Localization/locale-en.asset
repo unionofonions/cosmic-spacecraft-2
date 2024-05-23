@@ -79,3 +79,11 @@ MonoBehaviour:
     Text: BULLET SPEED
   - Keyword: gun_count
     Text: GUN COUNT
+  - Keyword: level_2
+    Text: ASTEROID BELT
+  - Keyword: level_3
+    Text: ANDROMEDA VORTEX
+  - Keyword: level_4
+    Text: ZENITH VOID
+  - Keyword: level_5
+    Text: SHIP GRAVEYARD

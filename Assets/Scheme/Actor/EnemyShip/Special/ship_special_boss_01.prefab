@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11068d4c213688542805f07a251b9185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Damage: 3
+  m_Damage: 21
   m_DamageDeviation: 0.2
   m_CritChance: 0
   m_CritDamage: 1
@@ -153,23 +153,23 @@ MonoBehaviour:
   m_Health:
     m_Current: 100
     m_Max: 100
-  m_Armor: 0
+  m_Armor: 50
   m_Shield:
     m_Current: 0
     m_Max: 0
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 3.6
   m_Faction: 0
-  m_Score: 9
+  m_Score: 40
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 6
   m_DeathAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 11
+    m_Id: 2
   m_DeathTfx:
     m_Library: {fileID: 11400000, guid: 28f9df5129c67b94588c57c142ecf0b4, type: 2}
     m_Id: 1
-    m_Amplitude: 0.4
+    m_Amplitude: 0.5
     m_Duration: 3
   m_DeathSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
@@ -180,21 +180,73 @@ MonoBehaviour:
   - {fileID: -1925293377, guid: 11a43ae035e625c438b4ef4fe81e6132, type: 3}
   - {fileID: -251486202, guid: 11a43ae035e625c438b4ef4fe81e6132, type: 3}
   - {fileID: 855740322, guid: 11a43ae035e625c438b4ef4fe81e6132, type: 3}
-  m_FireInterval: 0.1
-  m_BulletSpeed: 7.4
+  m_FireInterval: 0.05
+  m_BulletSpeed: 3
   m_BulletScheme: {fileID: 5955453443571106428, guid: cf8ff7f78b160c94a95f52cc583063c7, type: 3}
   m_FireSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
     m_Id: 0
+  m_ShipType: 2
   m_Flags: -1
-  m_RotationSpeed: 300
-  m_DynamicSpin: 1
+  m_RotationSpeed: 5
+  m_DynamicSpin: 0
   m_Route:
-    m_StartPosition: {x: 0, y: 0, z: 0}
-    m_Destinations: []
-    m_Loop: 0
+    m_StartPosition: {x: 0, y: 7, z: 0}
+    m_Destinations:
+    - {x: 0, y: 3.75, z: 0}
+    - {x: -3.5, y: 3, z: 0}
+    - {x: 0, y: 2.3, z: 0}
+    - {x: 3.5, y: 3, z: 0}
+    m_Loop: 1
   m_Guns:
   - {fileID: 2058885543442384975}
+  - {fileID: 5053564285188740871}
+--- !u!1 &371833354692697989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705231748337924694}
+  - component: {fileID: 5053564285188740871}
+  m_Layer: 0
+  m_Name: gun_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705231748337924694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371833354692697989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.3, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5954328250857184567}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &5053564285188740871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371833354692697989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2e98c63f68b374886f4ed9302c2c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Muzzles:
+  - {fileID: 1705231748337924694}
 --- !u!1 &1637111851552671548
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1170916678553475670}
+  - {fileID: 1705231748337924694}
   m_Father: {fileID: 7330030076393694004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3368260915802256885
@@ -253,7 +306,7 @@ Transform:
   m_GameObject: {fileID: 3368260915802256885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.23, z: 0}
+  m_LocalPosition: {x: 0, y: -0.231, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -301,7 +354,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -62624987, guid: d6d3322cc3c23b34e9914a2864077033, type: 3}
+  m_Sprite: {fileID: 647231756, guid: d6d3322cc3c23b34e9914a2864077033, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -339,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 4331761600811060853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -386,7 +439,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 1288295437, guid: 545cd8397521b314c971aad105932233, type: 3}
+  m_Sprite: {fileID: 1040208324, guid: 545cd8397521b314c971aad105932233, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -411,10 +464,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IntervalBetweenFrames: 0.1
   m_Frames:
-  - {fileID: 1288295437, guid: 545cd8397521b314c971aad105932233, type: 3}
-  - {fileID: -616734972, guid: 545cd8397521b314c971aad105932233, type: 3}
-  - {fileID: -1777032802, guid: 545cd8397521b314c971aad105932233, type: 3}
-  - {fileID: -730554326, guid: 545cd8397521b314c971aad105932233, type: 3}
+  - {fileID: 1040208324, guid: 545cd8397521b314c971aad105932233, type: 3}
+  - {fileID: -678451059, guid: 545cd8397521b314c971aad105932233, type: 3}
+  - {fileID: -235386970, guid: 545cd8397521b314c971aad105932233, type: 3}
+  - {fileID: 2096755846, guid: 545cd8397521b314c971aad105932233, type: 3}
 --- !u!1 &8899434422834595039
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +494,7 @@ Transform:
   m_GameObject: {fileID: 8899434422834595039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.673, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

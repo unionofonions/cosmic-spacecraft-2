@@ -79,3 +79,11 @@ MonoBehaviour:
     Text: MERMI HIZI
   - Keyword: gun_count
     Text: SILAH SAYISI
+  - Keyword: level_2
+    Text: ASTEROIT KUSAGI
+  - Keyword: level_3
+    Text: ANDROMEDA GIRDABI
+  - Keyword: level_4
+    Text: ZIRVE BOSLUGU
+  - Keyword: level_5
+    Text: GEMI MEZARLIGI

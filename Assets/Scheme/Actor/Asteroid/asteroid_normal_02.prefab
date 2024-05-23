@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c1379bc00dea1984ab30720a32d35e4a, type: 3}
-  m_Color: {r: 0.61145556, g: 0.6415094, b: 0.58401567, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fa33bfb3dcef8074dae51047ac0c3f0b, type: 3}
+  m_Color: {r: 0.51370597, g: 0.6981132, b: 0.3523496, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1111112, y: 1.1111112}
+    oldSize: {x: 1.8461539, y: 1.8461539}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -188,18 +188,18 @@ MonoBehaviour:
   m_Score: 11
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 0
+    m_Id: 9
   m_DeathAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 1
   m_DeathTfx:
     m_Library: {fileID: 11400000, guid: 28f9df5129c67b94588c57c142ecf0b4, type: 2}
-    m_Id: 0
-    m_Amplitude: 0
-    m_Duration: 0
+    m_Id: 6
+    m_Amplitude: 0.1
+    m_Duration: 0.5
   m_DeathSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
-    m_Id: 0
+    m_Id: 9
   m_ShieldVisual: {fileID: 0}
   m_BodyVisuals: []
   m_AsteroidFlags: 0

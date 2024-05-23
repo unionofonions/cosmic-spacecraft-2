@@ -261,14 +261,16 @@ MonoBehaviour:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
     m_Id: 0
   m_ShipType: 1
-  m_Flags: -1
+  m_Flags: 0
   m_RotationSpeed: 120
   m_DynamicSpin: 0
   m_Route:
-    m_StartPosition: {x: 0, y: 7, z: 0}
+    m_StartPosition: {x: -5, y: 7, z: 0}
     m_Destinations:
-    - {x: -4, y: 3, z: 0}
-    - {x: 4, y: 3, z: 0}
+    - {x: -5, y: 2.5, z: 0}
+    - {x: 5, y: 2, z: 0}
+    - {x: 4, y: 1, z: 0}
+    - {x: 4, y: 3.5, z: 0}
     m_Loop: 1
   m_Guns:
   - {fileID: 5659169473260640412}

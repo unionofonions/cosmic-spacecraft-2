@@ -79,3 +79,11 @@ MonoBehaviour:
     Text: VELOCIDAD DE BALA
   - Keyword: gun_count
     Text: CANTIDAD DE ARMAS
+  - Keyword: level_2
+    Text: ASTEROIDE CINTURON
+  - Keyword: level_3
+    Text: VORTICE DE ANROMEDA
+  - Keyword: level_4
+    Text: VACO DEL CENIT
+  - Keyword: level_5
+    Text: CEMENTERIO DE NAVES

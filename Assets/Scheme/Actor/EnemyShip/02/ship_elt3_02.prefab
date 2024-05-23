@@ -294,27 +294,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11068d4c213688542805f07a251b9185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Damage: 10
+  m_Damage: 25
   m_DamageDeviation: 0.2
-  m_CritChance: 0
-  m_CritDamage: 1
+  m_CritChance: 0.2
+  m_CritDamage: 1.6
   m_ArmorPenetration: 0
   m_Health:
-    m_Current: 75
-    m_Max: 75
-  m_Armor: 10
+    m_Current: 85
+    m_Max: 85
+  m_Armor: 15
   m_Shield:
-    m_Current: 100
-    m_Max: 100
-  m_MoveSpeed: 2.5
+    m_Current: 120
+    m_Max: 120
+  m_MoveSpeed: 3.5
   m_Faction: 0
-  m_Score: 9
+  m_Score: 21
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
     m_Id: 6
   m_DeathAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 11
+    m_Id: 2
   m_DeathTfx:
     m_Library: {fileID: 11400000, guid: 28f9df5129c67b94588c57c142ecf0b4, type: 2}
     m_Id: 6
@@ -325,21 +325,23 @@ MonoBehaviour:
     m_Id: 9
   m_ShieldVisual: {fileID: 6203577253800806514}
   m_BodyVisuals: []
-  m_FireInterval: 1
-  m_BulletSpeed: 6
+  m_FireInterval: 0.32
+  m_BulletSpeed: 5.5
   m_BulletScheme: {fileID: 806518130670615132, guid: 9f02a1094507c1b4e8e0b230a23be1c3, type: 3}
   m_FireSfx:
     m_Library: {fileID: 11400000, guid: edeb42af9d7ee8c46b7a9f9f7ed6669d, type: 2}
     m_Id: 0
   m_ShipType: 1
   m_Flags: -1
-  m_RotationSpeed: 120
+  m_RotationSpeed: 150
   m_DynamicSpin: 0
   m_Route:
     m_StartPosition: {x: 0, y: 7, z: 0}
     m_Destinations:
     - {x: -4, y: 3, z: 0}
+    - {x: 4, y: 1, z: 0}
     - {x: 4, y: 3, z: 0}
+    - {x: -4, y: 1, z: 0}
     m_Loop: 1
   m_Guns:
   - {fileID: 1795892936077926529}

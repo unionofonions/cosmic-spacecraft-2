@@ -18,19 +18,19 @@ MonoBehaviour:
     m_Valid: 0
     m_Scheme: {fileID: 0}
   m_Heap:
-  - m_Name: explosion/01
+  - m_Name: explosion/normal_exp
     m_Id: 1
     m_Valid: 1
     m_Scheme: {fileID: 8057265051992448336, guid: c4836c4eb1e30b1409d42c945f1910a2, type: 3}
-  - m_Name: explosion/02
+  - m_Name: explosion/big_exp
     m_Id: 2
     m_Valid: 1
     m_Scheme: {fileID: 4903981374413704023, guid: 910ee1534ee83bc49a81944e65361ef3, type: 3}
-  - m_Name: explosion/04
+  - m_Name: explosion/cool_dust
     m_Id: 11
     m_Valid: 1
     m_Scheme: {fileID: 6497617180720347563, guid: 3950e59485dc08f41871f3ccfd5cdb3a, type: 3}
-  - m_Name: explosion/05
+  - m_Name: explosion/normal_dust
     m_Id: 12
     m_Valid: 1
     m_Scheme: {fileID: 3715229670659035750, guid: 48c80916bec88f04ab83c0c7719f8a83, type: 3}
@@ -62,8 +62,4 @@ MonoBehaviour:
     m_Id: 10
     m_Valid: 1
     m_Scheme: {fileID: 6019064033283836878, guid: 1657134714eca1644af82cb2218be89c, type: 3}
-  - m_Name: dtor/hyb/01
-    m_Id: 13
-    m_Valid: 1
-    m_Scheme: {fileID: 3949074434966649545, guid: 2339f197cef2eab42827f3ebb7d9f202, type: 3}
   m_NextId: 13

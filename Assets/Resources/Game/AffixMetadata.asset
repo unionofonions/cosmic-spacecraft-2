@@ -24,8 +24,8 @@ MonoBehaviour:
         - damage
       FortifyAmountMap:
         m_Values:
-        - 5
-        - 10
+        - 8
+        - 14
         - -5
         - -10
     - DescriptionKeywordMap:
@@ -36,22 +36,22 @@ MonoBehaviour:
         - crit_chance
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 0.1
+        - 0.2
+        - -0.06
+        - -0.1
     - DescriptionKeywordMap:
         m_Values:
-        - 
-        - 
-        - 
-        - 
+        - crit_damage
+        - crit_damage
+        - crit_damage
+        - crit_damage
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 0.2
+        - 0.35
+        - -0.1
+        - -0.15
     - DescriptionKeywordMap:
         m_Values:
         - armor_pen
@@ -60,22 +60,22 @@ MonoBehaviour:
         - armor_pen
       FortifyAmountMap:
         m_Values:
-        - 7
-        - 11
-        - -4
-        - -7
-    - DescriptionKeywordMap:
-        m_Values:
-        - max_health
-        - max_health
-        - max_health
-        - max_health
-      FortifyAmountMap:
-        m_Values:
-        - 10
+        - 9
         - 15
-        - -7
+        - -5
+        - -9
+    - DescriptionKeywordMap:
+        m_Values:
+        - max_health
+        - max_health
+        - max_health
+        - max_health
+      FortifyAmountMap:
+        m_Values:
+        - 18
+        - 25
         - -10
+        - -15
     - DescriptionKeywordMap:
         m_Values:
         - armor
@@ -84,10 +84,10 @@ MonoBehaviour:
         - armor
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 9
+        - 15
+        - -6
+        - -9
     - DescriptionKeywordMap:
         m_Values:
         - max_shield
@@ -96,10 +96,10 @@ MonoBehaviour:
         - max_shield
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 18
+        - 25
+        - -10
+        - -15
     - DescriptionKeywordMap:
         m_Values:
         - move_speed
@@ -108,10 +108,10 @@ MonoBehaviour:
         - move_speed
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 0.2
+        - 0.3
+        - -0.1
+        - -0.2
     - DescriptionKeywordMap:
         m_Values:
         - fire_rate
@@ -120,10 +120,10 @@ MonoBehaviour:
         - fire_rate
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 0.012
+        - 0.02
+        - -0.008
+        - -0.012
     - DescriptionKeywordMap:
         m_Values:
         - bullet_speed
@@ -132,10 +132,10 @@ MonoBehaviour:
         - bullet_speed
       FortifyAmountMap:
         m_Values:
-        - 0
-        - 0
-        - 0
-        - 0
+        - 1.2
+        - 1.8
+        - -0.8
+        - -1.2
     - DescriptionKeywordMap:
         m_Values:
         - gun_count

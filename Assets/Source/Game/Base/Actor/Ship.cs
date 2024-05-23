@@ -6,7 +6,7 @@ namespace Parlor.Game
 	public abstract class Ship : Actor
 	{
 		public const float MinFireInterval = 0.04f;
-		public const float MinBulletSpeed = 3f;
+		public const float MinBulletSpeed = 1.5f;
 
 		[Header("Ship")]
 		[SerializeField, Limited(MinFireInterval)]

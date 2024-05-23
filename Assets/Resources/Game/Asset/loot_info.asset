@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6316fbd799101254ea2a9d65b8500367, type: 3}
   m_Name: loot_info
   m_EditorClassIdentifier: 
-  m_HealDropChance: 0.03
-  m_ShieldDropChance: 0.05
+  m_HealDropChance: 0.09
+  m_ShieldDropChance: 0.1
   m_HealAmount:
-    Start: 10
-    End: 25
+    Start: 12
+    End: 30
   m_ShieldAmount:
-    Start: 15
-    End: 25
+    Start: 14
+    End: 32

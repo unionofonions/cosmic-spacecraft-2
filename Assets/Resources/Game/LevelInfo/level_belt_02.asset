@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7366ceb4cac682e48a232f46981c5653, type: 3}
   m_Name: level_belt_02
   m_EditorClassIdentifier: 
-  m_LevelName: 
+  m_LevelName: level_5
   m_Waves:
   - m_Action: 1
-    m_WaitDuration: 3.5
+    m_WaitDuration: 2
     m_SpawnScheme: {fileID: 0}
     m_SpawnCount: 1
   - m_Action: 0
@@ -260,5 +260,9 @@ MonoBehaviour:
     m_SpawnCount: 1
   - m_Action: 2
     m_WaitDuration: 1
+    m_SpawnScheme: {fileID: 2415587206496018726, guid: 9930323cd100a4442a8f53c39a52267e, type: 3}
+    m_SpawnCount: 1
+  - m_Action: 1
+    m_WaitDuration: 2
     m_SpawnScheme: {fileID: 2415587206496018726, guid: 9930323cd100a4442a8f53c39a52267e, type: 3}
     m_SpawnCount: 1

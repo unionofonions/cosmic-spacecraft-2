@@ -187,17 +187,17 @@ MonoBehaviour:
     m_Max: 75
   m_Armor: 10
   m_Shield:
-    m_Current: 150
-    m_Max: 150
+    m_Current: 100
+    m_Max: 100
   m_MoveSpeed: 3
   m_Faction: 0
   m_Score: 20
   m_HitAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 6
+    m_Id: 4
   m_DeathAfx:
     m_Library: {fileID: 11400000, guid: 940f5d4fc51530e428998032e3276ce4, type: 2}
-    m_Id: 11
+    m_Id: 2
   m_DeathTfx:
     m_Library: {fileID: 11400000, guid: 28f9df5129c67b94588c57c142ecf0b4, type: 2}
     m_Id: 6

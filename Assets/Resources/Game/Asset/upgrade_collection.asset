@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Bank:
     m_Collection:
     - m_Value:
-        m_Icon: {fileID: 875065333, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Icon: {fileID: -1517597762, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
         - m_AffixType: 0
           m_Quality: 0
@@ -23,12 +23,220 @@ MonoBehaviour:
       m_Weighted: 0
       m_Chance: 0
     - m_Value:
-        m_Icon: {fileID: 1099988124, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Icon: {fileID: 744846137, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
         - m_AffixType: 0
           m_Quality: 1
         - m_AffixType: 4
           m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -108192013, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 1
+        - m_AffixType: 5
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -161726610, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 1
+        - m_AffixType: 7
+          m_Quality: 2
+        - m_AffixType: 1
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 1037898190, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 1
+        - m_AffixType: 3
+          m_Quality: 0
+        - m_AffixType: 5
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -530585227, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 0
+        - m_AffixType: 8
+          m_Quality: 0
+        - m_AffixType: 4
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 128043039, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 0
+        - m_AffixType: 2
+          m_Quality: 0
+        - m_AffixType: 3
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 1037898190, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 0
+          m_Quality: 0
+        - m_AffixType: 9
+          m_Quality: 0
+        - m_AffixType: 6
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 744846137, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 1
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 875065333, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 1
+          m_Quality: 1
+        - m_AffixType: 5
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 1099988124, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 1
+          m_Quality: 1
+        - m_AffixType: 2
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 875065333, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 1
+          m_Quality: 1
+        - m_AffixType: 4
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 128043039, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 1
+          m_Quality: 0
+        - m_AffixType: 7
+          m_Quality: 0
+        - m_AffixType: 4
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -108192013, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 1
+          m_Quality: 0
+        - m_AffixType: 2
+          m_Quality: 0
+        - m_AffixType: 5
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 1099988124, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -1517597762, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 0
+        - m_AffixType: 6
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -97962810, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 1
+        - m_AffixType: 8
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -161726610, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 0
+        - m_AffixType: 3
+          m_Quality: 0
+        - m_AffixType: 0
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -2072733969, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 0
+        - m_AffixType: 5
+          m_Quality: 0
+        - m_AffixType: 3
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 1037898190, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 1
+        - m_AffixType: 0
+          m_Quality: 0
+        - m_AffixType: 4
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -2141739302, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 2
+          m_Quality: 1
+        - m_AffixType: 8
+          m_Quality: 0
+        - m_AffixType: 7
+          m_Quality: 3
       m_Weight: 0
       m_Weighted: 0
       m_Chance: 0
@@ -41,13 +249,207 @@ MonoBehaviour:
       m_Weighted: 0
       m_Chance: 0
     - m_Value:
+        m_Icon: {fileID: 529580976, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 3
+          m_Quality: 1
+        - m_AffixType: 5
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
         m_Icon: {fileID: 744846137, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
         m_Affixes:
-        - m_AffixType: 10
+        - m_AffixType: 3
+          m_Quality: 1
+        - m_AffixType: 4
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -530585227, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 3
+          m_Quality: 0
+        - m_AffixType: 7
+          m_Quality: 0
+        - m_AffixType: 8
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 128043039, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 3
+          m_Quality: 0
+        - m_AffixType: 9
+          m_Quality: 0
+        - m_AffixType: 1
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 451553903, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 3
+          m_Quality: 0
+        - m_AffixType: 1
+          m_Quality: 0
+        - m_AffixType: 2
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -108192013, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
           m_Quality: 0
       m_Weight: 0
       m_Weighted: 0
       m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -1517597762, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
+          m_Quality: 1
+        - m_AffixType: 5
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 875065333, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
+          m_Quality: 0
+        - m_AffixType: 5
+          m_Quality: 0
+        - m_AffixType: 6
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -2141739302, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
+          m_Quality: 1
+        - m_AffixType: 5
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 875065333, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
+          m_Quality: 0
+        - m_AffixType: 9
+          m_Quality: 0
+        - m_AffixType: 1
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 744846137, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
+          m_Quality: 1
+        - m_AffixType: 5
+          m_Quality: 0
+        - m_AffixType: 1
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 451553903, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 4
+          m_Quality: 0
+        - m_AffixType: 0
+          m_Quality: 0
+        - m_AffixType: 3
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -1517597762, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 5
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 529580976, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 5
+          m_Quality: 0
+        - m_AffixType: 7
+          m_Quality: 2
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -108192013, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 6
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 128043039, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 7
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 676270843, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 8
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: -530585227, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 9
+          m_Quality: 0
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 451553903, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 10
+          m_Quality: 0
+        - m_AffixType: 5
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
+    - m_Value:
+        m_Icon: {fileID: 128043039, guid: 6fa9b0f2125875242a81f4c5e3d93268, type: 3}
+        m_Affixes:
+        - m_AffixType: 10
+          m_Quality: 0
+        - m_AffixType: 4
+          m_Quality: 3
+      m_Weight: 0
+      m_Weighted: 0
+      m_Chance: 0
     m_Mode: 1
-    m_Threshold: 2
+    m_Threshold: 21
     m_TotalWeight: 0
